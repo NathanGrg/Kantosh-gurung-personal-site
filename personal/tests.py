@@ -27,3 +27,4 @@ class SectionPageTitleTests(TestCase):
                 response = self.client.get(reverse(route_name))
 
                 self.assertContains(response, f'<title>{page_title}</title>')
+                self.assertContains(response, f'<h1>{page_title}</h1>')
