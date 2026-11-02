@@ -7,7 +7,7 @@
     <title>{% block title %}Community Health Initiative{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="{% static 'personal/favicon.svg' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -23,7 +23,12 @@
                     {% endif %}
                 </h1>
             </a>
-            <ul class="navbar__links">
+            <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar__links" id="primary-navigation">
                 <li><a href="{% url 'base' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'program' %}">Program</a></li>
@@ -54,10 +59,41 @@
     <script>
         const header = document.querySelector("header");
         const navbar = document.querySelector(".navbar");
+        const menuToggle = document.querySelector(".navbar__toggle");
+        const navigation = document.querySelector(".navbar__links");
+        const mobileNavigation = window.matchMedia("(max-width: 900px)");
+
+        document.documentElement.classList.add("js");
+
         const updateHeaderHeight = () => {
             header.style.height = `${navbar.offsetHeight}px`;
         };
 
+        const setMenuOpen = (isOpen) => {
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+            navigation.classList.toggle("is-open", isOpen);
+            updateHeaderHeight();
+        };
+
+        menuToggle.addEventListener("click", () => {
+            setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+        });
+
+        navigation.addEventListener("click", (event) => {
+            if (event.target.closest("a") && mobileNavigation.matches) {
+                setMenuOpen(false);
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+                setMenuOpen(false);
+                menuToggle.focus();
+            }
+        });
+
+        mobileNavigation.addEventListener("change", () => setMenuOpen(false));
         updateHeaderHeight();
         new ResizeObserver(updateHeaderHeight).observe(navbar);
     </script>
