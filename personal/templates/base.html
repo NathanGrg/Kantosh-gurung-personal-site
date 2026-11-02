@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Community Health Initiative{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="{% static 'personal/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="navbar__brand" href="{% url 'base' %}">
+                <h1>
+                    {% if request.resolver_match.url_name == "base" or request.resolver_match.url_name == "about" %}
+                        Nathan Gurung
+                    {% else %}
+                        Community Health Initiative
+                    {% endif %}
+                </h1>
+            </a>
+            <ul class="navbar__links">
+                <li><a href="{% url 'base' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'program' %}">Program</a></li>
+                <li><a href="{% url 'objectives' %}">Objectives</a></li>
+                <li><a href="{% url 'contributions' %}">Contributions</a></li>
+                <li><a href="{% url 'health_news' %}">Health News</a></li>
+                <li><a href="{% url 'team' %}">Our Team</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            {% if request.resolver_match.url_name == "base" or request.resolver_match.url_name == "about" %}
+                &copy; 2026 Nathan Gurung
+            {% else %}
+                &copy; 2026 Community Health Initiative. Sample website content for demonstration.
+            {% endif %}
+        </p>
+    </footer>
+    <script>
+        const header = document.querySelector("header");
+        const navbar = document.querySelector(".navbar");
+        const updateHeaderHeight = () => {
+            header.style.height = `${navbar.offsetHeight}px`;
+        };
+
+        updateHeaderHeight();
+        new ResizeObserver(updateHeaderHeight).observe(navbar);
+    </script>
+</body>
+</html>

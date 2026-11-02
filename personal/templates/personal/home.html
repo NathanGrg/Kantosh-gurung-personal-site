@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Nathan Gurung | Home{% endblock %}
+
+{% block content %}
+    <section class="personal-hero" aria-labelledby="personal-hero-title">
+        <div class="personal-hero__content">
+            <p class="eyebrow">Hello, I’m</p>
+            <h2 id="personal-hero-title">Nathan Gurung</h2>
+            <p class="personal-hero__intro">
+                A curious learner who enjoys exploring ideas, building useful things, and finding
+                new ways to grow.
+            </p>
+            <a class="home-intro__link" href="{% url 'about' %}">A little more about me</a>
+        </div>
+        <figure class="personal-hero__portrait">
+            <img
+                src="{% static 'images/placeholder.jpg' %}"
+                alt="Placeholder portrait for Nathan Gurung"
+                fetchpriority="high"
+            >
+            <figcaption>Personal website</figcaption>
+        </figure>
+    </section>
+
+    <div class="home-overview">
+        <section class="page-section home-intro">
+            <p class="eyebrow">A little about me</p>
+            <h2>Curious by nature. Always learning.</h2>
+            <p class="page-section__intro">
+                I’m interested in thoughtful ideas, creative problem-solving, and the small steps
+                that turn a good idea into something real.
+            </p>
+            <p>
+                This is my corner of the web: a place to share a bit about who I am, what I’m
+                learning, and the things I hope to make along the way.
+            </p>
+            <a class="home-intro__link" href="{% url 'about' %}">Read my story</a>
+        </section>
+
+        <aside class="home-explore personal-note" aria-labelledby="personal-note-heading">
+            <p class="eyebrow">What matters to me</p>
+            <h2 id="personal-note-heading">Stay curious. Keep creating.</h2>
+            <p>
+                I value learning through experience, being open to different perspectives, and
+                making time for work that feels useful and meaningful.
+            </p>
+            <a class="personal-note__link" href="{% url 'about' %}">More about Nathan <span aria-hidden="true">&rarr;</span></a>
+        </aside>
+    </div>
+{% endblock %}
