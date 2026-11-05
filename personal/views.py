@@ -2,15 +2,6 @@ from django.shortcuts import render
 
 
 SECTION_CONTENT = {
-    'about': {
-        'title': 'About Me',
-        'intro': 'I’m Nathan Gurung, and I believe the best way to grow is to stay curious, keep learning, and make things with purpose.',
-        'paragraphs': [
-            'I made this website as a place to introduce myself and share the ideas, interests, and projects that are part of my journey.',
-            'I enjoy learning by doing, exploring new perspectives, and taking on challenges that help me become a better thinker and creator.',
-            'I’m always growing and figuring out what comes next. Thanks for stopping by and getting to know a little about me.',
-        ],
-    },
     'program': {
         'title': 'Dental Health Programs',
         'intro': 'Practical ideas for building confident smiles through oral health education, prevention, and access to care.',
@@ -21,32 +12,32 @@ SECTION_CONTENT = {
             {
                 'title': 'Oral Health Education',
                 'description': 'Share clear, age-appropriate information about daily brushing, flossing, and keeping up with routine dental visits.',
-                'image': 'images/d1.jpg',
-                'image_alt': 'A dentist provides care to a young patient',
+                'image': 'images/wa10.jpeg',
+                'image_alt': 'Community members take part in an oral health program',
             },
             {
                 'title': 'Children’s Dental Visits',
                 'description': 'Help children feel comfortable at the dentist with welcoming visits, family guidance, and positive oral-health activities.',
-                'image': 'images/d2.jpeg',
-                'image_alt': 'A dental professional checks a child’s teeth',
+                'image': 'images/wa7.jpeg',
+                'image_alt': 'A health worker examines a child during a dental visit',
             },
             {
                 'title': 'Community Dental Outreach',
                 'description': 'Connect neighborhoods with oral-health information and guidance on finding local dental services.',
-                'image': 'images/d3.jpg',
-                'image_alt': 'Dental professionals provide care in a clinic',
+                'image': 'images/wa17.jpeg',
+                'image_alt': 'A health worker shares resources during community outreach',
             },
             {
                 'title': 'Prevention and Early Visits',
                 'description': 'Encourage regular checkups so people can discuss concerns and preventive care with a qualified dental professional.',
-                'image': 'images/d4.jpg',
-                'image_alt': 'Dental students take part in an oral health awareness event',
+                'image': 'images/wa19.jpeg',
+                'image_alt': 'A close-up view during a dental examination',
             },
             {
                 'title': 'Dental Team Learning',
                 'description': 'Support continuing learning and collaboration among dental professionals to make care more welcoming and accessible.',
-                'image': 'images/d5.jpg',
-                'image_alt': 'Dental professionals gather for a training session',
+                'image': 'images/wa5.jpeg',
+                'image_alt': 'Community members gather for a health workshop',
             },
         ],
     },
@@ -56,8 +47,8 @@ SECTION_CONTENT = {
         'paragraphs': [
             'These sample objectives focus on prevention, education, and stronger connections with qualified dental professionals.',
         ],
-        'image': 'images/d4.jpg',
-        'image_alt': 'Dental students gather for a community oral health event',
+        'image': 'images/wa11.jpeg',
+        'image_alt': 'Students gather for a community oral health event',
         'items': [
             {
                 'title': 'Build everyday knowledge',
@@ -84,8 +75,8 @@ SECTION_CONTENT = {
             'Families, educators, dental professionals, and community groups can all help spread reliable oral-health information.',
             'The ideas below are examples only; this website does not currently offer dental services, events, or volunteer opportunities.',
         ],
-        'image': 'images/d5.jpg',
-        'image_alt': 'Dental professionals meet for a learning session',
+        'image': 'images/wa17.jpeg',
+        'image_alt': 'A health worker shares information during community outreach',
         'items': [
             {
                 'title': 'Share trusted resources',
@@ -113,8 +104,8 @@ SECTION_CONTENT = {
             'title': 'Making a dental visit feel more comfortable',
             'excerpt': 'A welcoming dental visit starts with open communication. Sharing questions and concerns with your dental team can help you understand what to expect.',
             'reading_time': '3 min read',
-            'image': 'images/d1.jpg',
-            'image_alt': 'A dentist examines a young patient',
+            'image': 'images/wa22.jpeg',
+            'image_alt': 'A dental professional examines a patient',
         },
         'articles': [
             {
@@ -122,24 +113,24 @@ SECTION_CONTENT = {
                 'title': 'Helping children feel at ease at the dentist',
                 'excerpt': 'A calm, supportive conversation before an appointment can help children know what to expect. Dental teams can answer questions along the way.',
                 'reading_time': '3 min read',
-                'image': 'images/d2.jpeg',
-                'image_alt': 'A child receives a dental checkup',
+                'image': 'images/wa7.jpeg',
+                'image_alt': 'A health worker examines a child during a dental visit',
             },
             {
                 'category': 'COMMUNITY',
                 'title': 'Taking oral-health learning into the community',
                 'excerpt': 'Community events can create friendly opportunities to learn about oral health and find out where to seek professional dental care.',
                 'reading_time': '2 min read',
-                'image': 'images/d3.jpg',
-                'image_alt': 'A dental team provides care at a community clinic',
+                'image': 'images/wa10.jpeg',
+                'image_alt': 'Community members take part in an oral health program',
             },
             {
                 'category': 'PREVENTION',
                 'title': 'Keep routine dental checkups on your calendar',
                 'excerpt': 'Regular visits give you time to discuss your oral health and ask a dental professional what care is right for you.',
                 'reading_time': '3 min read',
-                'image': 'images/d4.jpg',
-                'image_alt': 'Dental students take part in an oral health awareness event',
+                'image': 'images/wa19.jpeg',
+                'image_alt': 'A close-up view during a dental examination',
             },
         ],
         'disclaimer': 'General educational information only; it is not a diagnosis or a substitute for advice from your dentist. Ask a qualified dental professional about your individual needs.',
@@ -184,7 +175,4 @@ def base(request):
 
 
 def section(request, page):
-    return render(request, 'personal/section.html', {
-        'page': page,
-        **SECTION_CONTENT[page],
-    })
+    return render(request, f'personal/{page}.html', SECTION_CONTENT[page])

@@ -4,13 +4,13 @@
 
 :root {
     color-scheme: light;
-    --color-ink: #182238;
-    --color-muted: #647087;
-    --color-navy: #111b35;
-    --color-violet: #6253b2;
-    --color-lavender: #b7aaff;
-    --color-paper: #f6f7fa;
-    --color-border: #e2e6ef;
+    --color-ink: #183544;
+    --color-muted: #526b78;
+    --color-navy: #123047;
+    --color-violet: #087f8c;
+    --color-lavender: #bfe9e5;
+    --color-paper: #f2fafa;
+    --color-border: #d7e8e8;
     --shadow-card: 0 24px 60px rgb(22 35 64 / 10%);
     --ease-out: cubic-bezier(0.2, 0.75, 0.25, 1);
 }
@@ -23,7 +23,7 @@ body {
     min-height: 100dvh;
     flex-direction: column;
     margin: 0;
-    background: rgba(247, 248, 252, 0.96);
+    background: rgba(242, 250, 250, 0.98);
     color: var(--color-ink);
     font-family: "Manrope", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -33,9 +33,9 @@ body::before {
     position: fixed;
     z-index: -1;
     background:
-        radial-gradient(ellipse at 12% 18%, rgb(168 153 226 / 55%), transparent 34%),
-        radial-gradient(ellipse at 88% 38%, rgb(116 103 177 / 30%), transparent 38%),
-        radial-gradient(ellipse at 48% 92%, rgb(201 185 255 / 42%), transparent 40%);
+        radial-gradient(ellipse at 12% 18%, rgb(88 198 193 / 36%), transparent 34%),
+        radial-gradient(ellipse at 88% 38%, rgb(8 127 140 / 20%), transparent 38%),
+        radial-gradient(ellipse at 48% 92%, rgb(191 233 229 / 42%), transparent 40%);
     content: "";
     filter: blur(48px);
     inset: -48px;
@@ -703,7 +703,6 @@ main {
     justify-self: center;
     overflow: hidden;
     margin: 0;
-    border: 1px solid rgb(255 255 255 / 28%);
     border-radius: 1.25rem;
     background: #f0efec;
     box-shadow: 0 18px 40px rgb(0 0 0 / 20%);
@@ -1202,7 +1201,7 @@ main {
     padding: 0.9rem clamp(1rem, 4vw, 3.5rem);
     border-bottom: 1px solid rgb(255 255 255 / 54%);
     border-radius: 0 0 1.1rem 1.1rem;
-    background: rgba(250, 250, 255, 0.82);
+    background: rgb(73, 73, 109);
     box-shadow: 0 10px 32px rgb(35 28 75 / 10%);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
@@ -1219,7 +1218,7 @@ main {
 
 .navbar__brand h1 {
     margin: 0;
-    color: var(--color-navy);
+    color: white;
     font-family: inherit;
     font-size: clamp(1.05rem, 1.5vw, 1.25rem);
     font-weight: 800;
@@ -1248,7 +1247,7 @@ main {
     display: block;
     padding: 0.58rem 0.78rem;
     border-radius: 999px;
-    color: #424a60;
+    color: #ffffff;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.01em;
@@ -1258,8 +1257,8 @@ main {
 
 .navbar__links a:hover {
     transform: translateY(-1px);
-    background: rgb(98 83 178 / 11%);
-    color: var(--color-violet);
+    background: rgba(103, 93, 143, 0.11);
+    color: white;
 }
 
 .navbar__links a:focus-visible {
@@ -1278,7 +1277,7 @@ main {
     gap: 5px;
     border: 1px solid rgb(98 83 178 / 18%);
     border-radius: 0.8rem;
-    background: rgb(255 255 255 / 72%);
+    background: rgba(255, 255, 255, 0.947);
     cursor: pointer;
 }
 
@@ -1286,7 +1285,7 @@ main {
     width: 1.1rem;
     height: 2px;
     border-radius: 2px;
-    background: var(--color-navy);
+    background: black;
     transition: transform 200ms ease, opacity 200ms ease;
 }
 
@@ -1407,7 +1406,7 @@ main {
         padding: 0.65rem;
         border: 1px solid rgb(255 255 255 / 70%);
         border-radius: 1rem;
-        background: rgba(250, 250, 255, 0.96);
+        background: rgb(73, 73, 109);
         box-shadow: 0 18px 42px rgb(22 35 64 / 16%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -1421,7 +1420,13 @@ main {
     .js .navbar__links a {
         padding: 0.8rem;
         border-radius: 0.65rem;
+        color: #fff;
         font-size: 0.88rem;
+    }
+
+    .js .navbar__links a:hover {
+        background: rgb(255 255 255 / 14%);
+        color: #fff;
     }
 
     .news-grid {
@@ -1692,7 +1697,7 @@ main {
         padding: 0.65rem;
         border: 1px solid rgb(255 255 255 / 70%);
         border-radius: 1rem;
-        background: rgba(250, 250, 255, 0.96);
+        background: rgb(73, 73, 109);
         box-shadow: 0 18px 42px rgb(22 35 64 / 16%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -1706,7 +1711,13 @@ main {
     .js .navbar__links a {
         padding: 0.8rem;
         border-radius: 0.65rem;
+        color: #fff;
         font-size: 0.88rem;
+    }
+
+    .js .navbar__links a:hover {
+        background: rgb(255 255 255 / 14%);
+        color: #fff;
     }
 }
 
@@ -1752,9 +1763,12 @@ main {
     box-shadow: 0 28px 70px rgb(22 35 64 / 16%);
 }
 
-.personal-hero__portrait,
 .about-page__image {
     border: 1px solid rgb(255 255 255 / 40%);
+    border-radius: 1.35rem;
+}
+
+.personal-hero__portrait {
     border-radius: 1.35rem;
 }
 
@@ -1845,18 +1859,10 @@ main {
     z-index: 1;
     width: min(100%, 340px);
     aspect-ratio: 1;
-    border: 7px solid rgb(255 255 255 / 92%);
     border-radius: 50%;
     background: #e7eaf5;
     box-shadow: 0 28px 65px rgb(5 10 24 / 32%);
-    transform: rotate(2deg);
-    transition: transform 450ms var(--ease-out);
 }
-
-.personal-hero__portrait:hover {
-    transform: rotate(0) translateY(-4px);
-}
-
 .personal-hero__portrait figcaption {
     display: none;
 }
@@ -2149,5 +2155,1278 @@ main {
         min-height: 0;
         height: auto;
         aspect-ratio: 1;
+    }
+}
+
+/* Dental-inspired palette: clean teal, calm aqua, and deep clinical blue. */
+body {
+    background-color: var(--color-paper);
+}
+
+.page-section,
+.program-page__heading,
+.program-card,
+.dental-info-page__heading,
+.contact-page,
+.personal-hero,
+.home-intro,
+.about-page {
+    border-color: rgb(104 190 190 / 32%);
+    background:
+        radial-gradient(ellipse at 88% 12%, rgb(67 177 177 / 24%), transparent 36%),
+        linear-gradient(125deg, #10324a, #0d5967 62%, #086b78);
+}
+
+.personal-hero__content .eyebrow,
+.program-page__heading .eyebrow,
+.program-page__aside-number,
+.program-page__aside-rule,
+.dental-info-page__heading .eyebrow,
+.contact-page__heading .eyebrow,
+.contact-card__label,
+.home-intro .eyebrow,
+.about-page__heading::after {
+    color: var(--color-lavender);
+}
+
+.personal-hero__intro,
+.program-page__heading .page-section__intro,
+.program-page__note,
+.program-page__aside-label,
+.program-page__aside-caption,
+.dental-info-page__intro,
+.dental-info-page__note,
+.contact-page__heading > p:last-child,
+.home-intro .page-section__intro,
+.home-intro > p:not(.eyebrow, .page-section__intro),
+.about-page__intro,
+.about-page__content > p:not(.about-page__intro) {
+    color: #e1f3f2;
+}
+
+.program-card,
+.program-card h3,
+.program-card p,
+.dental-info-page__heading h2,
+.contact-page__heading h2,
+.contact-card a,
+.contact-card p,
+.home-intro h2,
+.about-page__heading h2 {
+    color: #fff;
+}
+
+.program-card__number {
+    background: #e5f6f4;
+    color: #075e68;
+}
+
+.home-explore,
+.dental-info-card,
+.team-card,
+.news-feature__body,
+.news-card {
+    border-color: var(--color-border);
+    background: linear-gradient(155deg, #fff, #f1f9f8);
+}
+
+.home-explore__links a {
+    border-color: var(--color-border);
+    color: #075e68;
+}
+
+.home-explore__links a:hover {
+    border-color: #69bdb9;
+    background: #eaf7f5;
+}
+
+.navbar,
+.js .navbar__links {
+    border-color: rgb(255 255 255 / 22%);
+    background: #104e5d;
+}
+
+.navbar__links a:hover,
+.js .navbar__links a:hover {
+    background: rgb(255 255 255 / 14%);
+}
+
+.navbar__toggle {
+    border-color: rgb(8 127 140 / 24%);
+}
+
+.site-footer {
+    border-top-color: rgb(104 190 190 / 25%);
+    background: #10324a;
+}
+
+/* Refined, light-forward design system for the dental and community-health pages. */
+:root {
+    --color-ink: #193744;
+    --color-muted: #617680;
+    --color-navy: #153b4a;
+    --color-violet: #087f8c;
+    --color-lavender: #bfe9e5;
+    --color-paper: #f5f8f8;
+    --color-border: #dce7e8;
+    --shadow-card: 0 18px 48px rgb(22 53 66 / 9%);
+}
+
+body {
+    background: #f5f8f8;
+    color: var(--color-ink);
+}
+
+body::before {
+    background:
+        radial-gradient(ellipse at 8% 12%, rgb(91 183 177 / 13%), transparent 34%),
+        radial-gradient(ellipse at 92% 38%, rgb(94 169 184 / 11%), transparent 38%),
+        radial-gradient(ellipse at 48% 96%, rgb(198 231 226 / 32%), transparent 40%);
+    filter: blur(56px);
+}
+
+main {
+    padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.personal-hero,
+.page-section,
+.program-page__heading,
+.dental-info-page__heading,
+.contact-page,
+.about-page {
+    border: 1px solid #dce8e9;
+    background: #fff;
+    box-shadow: var(--shadow-card);
+}
+
+.personal-hero {
+    min-height: 450px;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    overflow: hidden;
+    border-radius: 1.75rem;
+    background:
+        radial-gradient(ellipse at 2% 100%, rgb(185 229 222 / 36%), transparent 46%),
+        linear-gradient(135deg, #fff 0%, #f7fbfa 68%, #edf7f6 100%);
+    box-shadow: 0 24px 64px rgb(20 59 74 / 10%);
+}
+
+.personal-hero::before,
+.personal-hero::after {
+    border-color: rgb(8 127 130 / 10%);
+}
+
+.personal-hero__content .eyebrow,
+.home-intro .eyebrow,
+.home-explore .eyebrow,
+.program-page__heading .eyebrow,
+.program-page__section-heading .eyebrow,
+.dental-info-page__heading .eyebrow,
+.contact-page__heading .eyebrow,
+.news-heading .eyebrow,
+.team-page .eyebrow,
+.about-page__heading .eyebrow {
+    color: #087f82;
+}
+
+.personal-hero__content h2,
+.home-intro h2,
+.home-explore h2,
+.program-page__heading h2,
+.dental-info-page__heading h2,
+.contact-page__heading h2,
+.news-heading h2,
+.team-page h2,
+.about-page__heading h2 {
+    color: var(--color-navy);
+}
+
+.personal-hero__content h2 {
+    max-width: 720px;
+    font-size: clamp(3.6rem, 7vw, 6.4rem);
+    line-height: 0.98;
+}
+
+.personal-hero__intro {
+    max-width: 520px;
+    color: #526c76;
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+}
+
+.personal-hero__portrait {
+    width: min(100%, 350px);
+    border: 8px solid #fff;
+    border-radius: 1.5rem;
+    background: #e8f2f1;
+    box-shadow: 0 22px 55px rgb(20 59 74 / 19%);
+}
+
+.personal-hero__portrait img {
+    border-radius: 1rem;
+}
+
+.home-overview {
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+    gap: clamp(1rem, 2.4vw, 1.75rem);
+    margin-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.home-overview .home-intro,
+.home-explore {
+    min-height: 0;
+    border: 1px solid #dce8e9;
+    border-radius: 1.35rem;
+    background: #fff;
+    box-shadow: 0 12px 34px rgb(22 53 66 / 6%);
+}
+
+.home-overview .home-intro {
+    padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.home-intro h2 {
+    max-width: 650px;
+    font-size: clamp(2.4rem, 4.7vw, 3.8rem);
+    line-height: 1.04;
+}
+
+.home-intro .page-section__intro {
+    color: #3f5b66;
+}
+
+.home-intro > p:not(.eyebrow, .page-section__intro) {
+    color: var(--color-muted);
+}
+
+.home-explore {
+    padding: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+.home-explore h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 600;
+}
+
+.home-explore > p:not(.eyebrow) {
+    color: var(--color-muted);
+    line-height: 1.8;
+}
+
+.home-explore strong {
+    color: var(--color-navy);
+}
+
+.page-section.team-page {
+    width: min(100% - 2rem, 1200px);
+    border-radius: 1.5rem;
+    color: var(--color-muted);
+    line-height: 1.8;
+}
+
+.team-page .page-section__heading {
+    border-bottom-color: var(--color-border);
+}
+
+.team-page h2 {
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+}
+
+.team-page .page-section__intro {
+    color: #3f5b66;
+}
+
+.team-page p:not(.eyebrow, .page-section__intro) {
+    color: var(--color-muted);
+}
+
+.team-page #team-heading {
+    margin: 2rem 0 1rem;
+    color: var(--color-navy) !important;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+}
+
+.team-card {
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: #f9fbfb;
+    box-shadow: 0 8px 24px rgb(22 53 66 / 5%);
+}
+
+.team-card img {
+    border: 1px solid #e5eeee;
+    border-radius: 0.85rem;
+    background: #edf5f4;
+}
+
+.program-page__heading,
+.dental-info-page__heading {
+    border-radius: 1.5rem;
+    background:
+        radial-gradient(ellipse at 96% 0%, rgb(190 229 223 / 35%), transparent 38%),
+        #fff;
+    box-shadow: 0 18px 48px rgb(22 53 66 / 7%);
+}
+
+.program-page__heading h2,
+.dental-info-page__heading h2 {
+    font-size: clamp(2.8rem, 5.2vw, 4.5rem);
+    line-height: 1.04;
+}
+
+.program-page__heading .page-section__intro,
+.dental-info-page__intro {
+    color: #3f5b66;
+}
+
+.program-page__note,
+.dental-info-page__note {
+    color: var(--color-muted);
+}
+
+.program-page__aside {
+    border-left-color: #dce8e9;
+    color: var(--color-navy);
+}
+
+.program-page__aside-number {
+    color: #087f82;
+}
+
+.program-page__aside-label,
+.program-page__aside-caption {
+    color: var(--color-muted);
+}
+
+.program-page__aside-rule {
+    background: #8ed3cc;
+}
+
+.program-page__section-heading {
+    margin-bottom: 1.25rem;
+    border-bottom-color: var(--color-border);
+}
+
+.program-page__section-heading .eyebrow,
+.program-page__section-heading > span {
+    color: var(--color-navy);
+}
+
+.program-card {
+    min-height: 320px;
+    border: 1px solid #dce8e9;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 10px 28px rgb(22 53 66 / 6%);
+}
+
+.program-card::before {
+    background: #38a59f;
+}
+
+.program-card:hover {
+    border-color: #8ccbc6;
+    box-shadow: 0 18px 38px rgb(22 53 66 / 12%);
+}
+
+.program-card__image {
+    height: 190px;
+}
+
+.program-card__number {
+    background: #e7f5f3;
+    color: #087f82;
+}
+
+.program-card h3 {
+    color: var(--color-navy);
+}
+
+.program-card p {
+    color: var(--color-muted);
+}
+
+.program-card__arrow {
+    color: #087f82;
+}
+
+.dental-info-page__image {
+    border-radius: 1rem;
+    background: #e7f2f1;
+}
+
+.dental-info-card,
+.news-card {
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 10px 28px rgb(22 53 66 / 5%);
+}
+
+.dental-info-card:hover,
+.news-card:hover,
+.team-card:hover {
+    border-color: #a6d7d2;
+    box-shadow: 0 18px 38px rgb(22 53 66 / 10%);
+}
+
+.dental-info-card__number,
+.news-category {
+    color: #087f82;
+}
+
+.contact-page {
+    border-radius: 1.5rem;
+    background:
+        radial-gradient(ellipse at 96% 0%, rgb(190 229 223 / 32%), transparent 40%),
+        #fff;
+    box-shadow: 0 18px 48px rgb(22 53 66 / 8%);
+}
+
+.contact-page__heading .eyebrow {
+    color: #087f82;
+}
+
+.contact-page__heading h2 {
+    color: var(--color-navy);
+}
+
+.contact-page__heading > p:last-child {
+    color: #526c76;
+}
+
+.contact-card {
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: #f7fbfa;
+}
+
+.contact-card:hover {
+    border-color: #a6d7d2;
+    background: #f0f8f7;
+}
+
+.contact-card__label {
+    color: #087f82;
+}
+
+.contact-card a,
+.contact-card p {
+    color: var(--color-navy);
+}
+
+.contact-card a:focus-visible {
+    outline-color: #087f82;
+}
+
+.news-page {
+    width: min(100% - 2rem, 1200px);
+    margin: clamp(2rem, 5vw, 4rem) auto;
+}
+
+.news-heading {
+    max-width: 780px;
+    margin: 0 auto clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+}
+
+.news-heading h2 {
+    margin: 0.25rem 0 0.75rem;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1;
+}
+
+.news-heading > p:last-child {
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.news-disclaimer {
+    border: 1px solid #dce8e9;
+    border-radius: 0.75rem;
+    background: #edf6f5;
+    color: #526c76;
+}
+
+.news-feature {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: 0 16px 42px rgb(22 53 66 / 8%);
+}
+
+.news-feature__image {
+    background: #e7f2f1;
+}
+
+.news-feature__body {
+    background: #fff;
+}
+
+.news-feature h3,
+.news-latest-heading h3,
+.news-card h4 {
+    color: var(--color-navy);
+}
+
+.news-latest-heading {
+    border-bottom-color: var(--color-border);
+}
+
+.news-latest-heading span,
+.news-meta {
+    color: #71858d;
+}
+
+.news-card__image {
+    background: #e7f2f1;
+}
+
+.site-footer {
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #dce8e9;
+    background: #edf4f4;
+    color: #526c76;
+}
+
+@media (max-width: 900px) {
+    .personal-hero {
+        grid-template-columns: minmax(0, 1fr) minmax(230px, 0.72fr);
+    }
+
+    .program-page__heading {
+        grid-template-columns: minmax(0, 1fr) 180px;
+    }
+}
+
+@media (max-width: 700px) {
+    .personal-hero {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        padding: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    .personal-hero__content h2 {
+        font-size: clamp(3.1rem, 14vw, 5rem);
+    }
+
+    .personal-hero__portrait {
+        width: min(76vw, 300px);
+        justify-self: start;
+    }
+
+    .home-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .home-overview .home-intro,
+    .home-explore {
+        min-height: 0;
+    }
+
+    .program-page__heading {
+        grid-template-columns: 1fr;
+    }
+
+    .program-page__aside {
+        min-height: 0;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 0 0;
+        border-top: 1px solid var(--color-border);
+        border-left: 0;
+    }
+
+    .program-page__aside-number {
+        font-size: 3rem;
+    }
+
+    .program-page__aside-label {
+        margin: 0;
+    }
+
+    .program-page__aside-rule,
+    .program-page__aside-caption {
+        display: none;
+    }
+
+    .program-grid,
+    .dental-info-page__grid,
+    .news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .program-card,
+    .program-card:nth-child(4),
+    .program-card:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .page-section.team-page {
+        width: calc(100% - 1.25rem);
+        margin: 1.5rem auto;
+        padding: clamp(1.25rem, 5vw, 2.5rem);
+    }
+}
+
+@media (max-width: 520px) {
+    .personal-hero,
+    .program-page,
+    .dental-info-page,
+    .contact-page,
+    .news-page {
+        width: calc(100% - 1.25rem);
+    }
+
+    .program-grid,
+    .dental-info-page__grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-card {
+        min-height: 300px;
+    }
+
+    .news-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .news-feature__image img {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+/* Homepage feature treatment */
+.personal-hero {
+    min-height: 570px;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
+    gap: clamp(2.5rem, 8vw, 7rem);
+    padding: clamp(2.5rem, 7vw, 6rem);
+    border-color: rgb(191 233 229 / 28%);
+    border-radius: 2rem;
+    background:
+        radial-gradient(ellipse at 86% 16%, rgb(91 183 177 / 24%), transparent 34%),
+        radial-gradient(ellipse at 0% 100%, rgb(8 127 140 / 30%), transparent 44%),
+        linear-gradient(130deg, #12384a, #105765 68%, #0c6770);
+    box-shadow: 0 32px 80px rgb(15 56 70 / 18%);
+}
+
+.personal-hero::before {
+    top: -38%;
+    right: 15%;
+    width: clamp(300px, 40vw, 520px);
+    border-color: rgb(191 233 229 / 15%);
+}
+
+.personal-hero::after {
+    right: 4%;
+    bottom: -43%;
+    width: clamp(290px, 34vw, 440px);
+    border-color: rgb(191 233 229 / 10%);
+}
+
+.personal-hero__content {
+    max-width: 700px;
+}
+
+.personal-hero__content .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1.15rem;
+    color: #bfe9e5;
+    font-size: 0.82rem;
+    letter-spacing: 0.2em;
+}
+
+.personal-hero__content .eyebrow::before {
+    width: 1.8rem;
+    height: 1px;
+    background: #8bd1c9;
+    content: "";
+}
+
+.personal-hero__content h2 {
+    max-width: 700px;
+    color: #fff;
+    font-size: clamp(4.5rem, 8.5vw, 7.6rem);
+    line-height: 0.87;
+    text-wrap: balance;
+}
+
+.personal-hero__intro {
+    max-width: 520px;
+    margin-top: 1.8rem;
+    color: #e0f0ef;
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    line-height: 1.8;
+}
+
+.personal-hero__portrait {
+    width: min(100%, 390px);
+    aspect-ratio: 1;
+    justify-self: center;
+    border: 9px solid rgb(255 255 255 / 92%);
+    border-radius: 50%;
+    outline: 1px solid rgb(191 233 229 / 45%);
+    outline-offset: 12px;
+    background: #d7eae7;
+    box-shadow: 0 28px 70px rgb(5 26 36 / 40%);
+}
+
+.personal-hero__portrait img {
+    border-radius: 50%;
+    object-position: center 38%;
+}
+
+.personal-hero__portrait figcaption {
+    display: block;
+    right: 1.25rem;
+    bottom: 1.1rem;
+    left: 1.25rem;
+    width: fit-content;
+    max-width: calc(100% - 2.5rem);
+    margin: 0 auto;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: 999px;
+    background: rgb(16 57 70 / 86%);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+    backdrop-filter: blur(12px);
+}
+
+.home-overview {
+    gap: clamp(1rem, 2.2vw, 1.75rem);
+    margin-top: clamp(1.25rem, 2.5vw, 1.8rem);
+}
+
+.home-overview .home-intro,
+.home-explore {
+    border-top: 3px solid #65bbb3;
+    border-radius: 1.25rem;
+    box-shadow: 0 16px 38px rgb(22 53 66 / 7%);
+}
+
+.home-overview .home-intro {
+    padding: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+.home-intro h2 {
+    max-width: 650px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 0.98;
+}
+
+.home-explore {
+    background:
+        radial-gradient(ellipse at 100% 0%, rgb(191 233 229 / 40%), transparent 48%),
+        #fff;
+}
+
+@media (max-width: 700px) {
+    .personal-hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: clamp(2rem, 8vw, 3rem) clamp(1.5rem, 6vw, 2.5rem);
+        border-radius: 1.5rem;
+    }
+
+    .personal-hero__content h2 {
+        font-size: clamp(4rem, 15vw, 6rem);
+        line-height: 0.9;
+    }
+
+    .personal-hero__portrait {
+        width: min(72vw, 330px);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .personal-hero__portrait {
+        width: min(68vw, 280px);
+        outline-offset: 8px;
+    }
+
+    .personal-hero__portrait figcaption {
+        right: 0.75rem;
+        left: 0.75rem;
+        max-width: calc(100% - 1.5rem);
+        padding-inline: 0.75rem;
+        font-size: 0.65rem;
+    }
+}
+
+.home-overview .home-intro {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(2rem, 5vw, 3.75rem);
+    border: 1px solid #d5e7e5;
+    border-top: 0;
+    border-left: 4px solid #168e8d;
+    border-radius: 1.15rem;
+    background:
+        linear-gradient(115deg, #fff 0%, #fff 58%, #f2faf8 100%);
+    box-shadow: 0 20px 48px rgb(22 53 66 / 8%);
+}
+
+.home-overview .home-intro::before {
+    position: absolute;
+    z-index: -1;
+    top: -8rem;
+    right: -7rem;
+    width: clamp(14rem, 28vw, 22rem);
+    aspect-ratio: 1;
+    border: 1px solid rgb(8 127 140 / 10%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(191 233 229 / 28%), transparent 68%);
+    content: "";
+}
+
+.home-overview .home-intro > * {
+    position: relative;
+}
+
+.home-overview .home-intro .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 1rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #d8eeeb;
+    border-radius: 999px;
+    background: #edf8f6;
+    color: #087477;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+}
+
+.home-overview .home-intro .eyebrow::before {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: #2a9c94;
+    box-shadow: 0 0 0 3px rgb(42 156 148 / 12%);
+    content: "";
+}
+
+.home-overview .home-intro h2 {
+    max-width: 620px;
+    margin-top: 0;
+    font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+    letter-spacing: -0.035em;
+    line-height: 1;
+    text-wrap: balance;
+}
+
+.home-overview .home-intro .page-section__intro {
+    max-width: 660px;
+    margin: 1.4rem 0 0.9rem;
+    color: #385762;
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.home-overview .home-intro > p:not(.eyebrow, .page-section__intro) {
+    max-width: 630px;
+    margin: 0;
+    color: #647a82;
+    font-size: 0.98rem;
+    line-height: 1.85;
+}
+
+@media (max-width: 600px) {
+    .home-overview .home-intro {
+        padding: 1.6rem 1.35rem;
+        border-left-width: 3px;
+    }
+
+    .home-overview .home-intro h2 {
+        font-size: clamp(2.35rem, 10vw, 3.2rem);
+    }
+}
+
+/* Homepage visual refresh */
+.personal-hero {
+    min-height: 590px;
+    background:
+        radial-gradient(ellipse at 82% 18%, rgb(91 183 177 / 31%), transparent 34%),
+        radial-gradient(ellipse at 0% 100%, rgb(11 104 111 / 70%), transparent 48%),
+        linear-gradient(125deg, #102f41, #105765 67%, #0c6971);
+    box-shadow: 0 34px 84px rgb(15 56 70 / 22%);
+}
+
+.personal-hero__content .eyebrow {
+    color: #e7c98f;
+    letter-spacing: 0.16em;
+}
+
+.personal-hero__content .eyebrow::before {
+    width: 1.4rem;
+    background: #e7c98f;
+}
+
+.personal-hero__content h2 {
+    max-width: 620px;
+    font-size: clamp(4.6rem, 8.3vw, 7.3rem);
+    line-height: 0.88;
+}
+
+.personal-hero__intro {
+    max-width: 490px;
+    margin-top: 1.5rem;
+    font-size: clamp(1.05rem, 1.55vw, 1.18rem);
+    line-height: 1.8;
+}
+
+.personal-hero__credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.personal-hero__credentials li {
+    padding: 0.48rem 0.75rem;
+    border: 1px solid rgb(231 201 143 / 32%);
+    border-radius: 999px;
+    background: rgb(255 255 255 / 7%);
+    color: #f5ead5;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.personal-hero__portrait {
+    width: min(100%, 400px);
+    border: 10px solid #fff;
+    outline-color: rgb(231 201 143 / 64%);
+    box-shadow: 0 30px 75px rgb(5 26 36 / 40%);
+}
+
+.home-overview {
+    align-items: stretch;
+}
+
+.home-overview .home-intro {
+    border: 1px solid #deebe8;
+    border-left: 4px solid #b68b49;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgb(232 215 183 / 32%), transparent 45%),
+        linear-gradient(130deg, #fff 0%, #fbfaf6 100%);
+    box-shadow: 0 20px 48px rgb(22 53 66 / 8%);
+}
+
+.home-overview .home-intro::before {
+    top: auto;
+    right: -7rem;
+    bottom: -12rem;
+    border-color: rgb(182 139 73 / 13%);
+    background: radial-gradient(circle, rgb(232 215 183 / 27%), transparent 68%);
+}
+
+.home-overview .home-intro .eyebrow {
+    border-color: #eadfc9;
+    background: #f8f2e7;
+    color: #84622d;
+}
+
+.home-overview .home-intro .eyebrow::before {
+    background: #b68b49;
+    box-shadow: 0 0 0 3px rgb(182 139 73 / 14%);
+}
+
+.home-overview .home-intro h2 {
+    max-width: 570px;
+    color: #153b4a;
+    font-size: clamp(2.8rem, 4.7vw, 4rem);
+    line-height: 0.98;
+}
+
+.home-overview .home-intro .page-section__intro {
+    max-width: 620px;
+    color: #385762;
+}
+
+.home-overview .home-intro > p:not(.eyebrow, .page-section__intro) {
+    max-width: 580px;
+    color: #647a82;
+}
+
+.home-explore.personal-note {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #d6e8e5;
+    border-top: 3px solid #168e8d;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgb(191 233 229 / 42%), transparent 50%),
+        #fff;
+}
+
+.home-explore.personal-note::after {
+    position: absolute;
+    right: -3.2rem;
+    bottom: -3.2rem;
+    width: 9rem;
+    aspect-ratio: 1;
+    border: 1px solid rgb(8 127 140 / 14%);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.home-explore.personal-note .eyebrow {
+    color: #087477;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+}
+
+.home-explore.personal-note h2 {
+    max-width: 260px;
+    margin-bottom: 1.35rem;
+    color: #153b4a;
+    font-size: clamp(2rem, 3vw, 2.65rem);
+    line-height: 1;
+}
+
+.home-profile {
+    display: grid;
+    gap: 0;
+    margin: 0;
+}
+
+.home-profile > div {
+    padding: 0.95rem 0;
+    border-top: 1px solid #e5eeee;
+}
+
+.home-profile dt {
+    margin-bottom: 0.3rem;
+    color: #087477;
+    font-size: 0.67rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.home-profile dd {
+    margin: 0;
+    color: #294b57;
+    font-size: 0.94rem;
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+    .personal-hero {
+        min-height: 0;
+        gap: 2rem;
+    }
+
+    .personal-hero__content h2 {
+        font-size: clamp(3.9rem, 14.5vw, 5.8rem);
+    }
+
+    .personal-hero__credentials {
+        margin-top: 1.2rem;
+    }
+
+    .personal-hero__portrait {
+        width: min(72vw, 320px);
+    }
+
+    .home-overview .home-intro h2 {
+        font-size: clamp(2.45rem, 10vw, 3.3rem);
+    }
+}
+
+/* Lightweight entrance and interaction motion, with no animation-library dependency. */
+.personal-hero__content > * {
+    animation: home-copy-enter 760ms var(--ease-out) both;
+}
+
+.personal-hero__content > *:nth-child(1) {
+    animation-delay: 80ms;
+}
+
+.personal-hero__content > *:nth-child(2) {
+    animation-delay: 180ms;
+}
+
+.personal-hero__content > *:nth-child(3) {
+    animation-delay: 300ms;
+}
+
+.personal-hero__content > *:nth-child(4) {
+    animation-delay: 420ms;
+}
+
+.personal-hero__portrait {
+    animation: home-portrait-enter 1050ms var(--ease-out) 180ms both;
+    transition: box-shadow 350ms ease, outline-color 350ms ease;
+}
+
+.personal-hero__portrait img {
+    transition: transform 700ms var(--ease-out);
+}
+
+.personal-hero__portrait:hover img {
+    transform: scale(1.045);
+}
+
+.personal-hero__portrait:hover {
+    outline-color: rgb(231 201 143 / 90%);
+    box-shadow: 0 34px 86px rgb(5 26 36 / 48%);
+}
+
+.home-overview .home-intro,
+.home-explore.personal-note {
+    animation: home-card-enter 800ms var(--ease-out) both;
+}
+
+.home-overview .home-intro {
+    animation-delay: 260ms;
+}
+
+.home-explore.personal-note {
+    animation-delay: 400ms;
+}
+
+.home-profile > div {
+    transition: padding-left 220ms var(--ease-out), background-color 220ms ease;
+}
+
+.home-profile > div:hover {
+    padding-left: 0.55rem;
+    background: rgb(237 248 246 / 72%);
+}
+
+.personal-hero__credentials li {
+    animation: home-tag-enter 520ms var(--ease-out) both;
+    transition: transform 200ms var(--ease-out), background-color 200ms ease, border-color 200ms ease;
+}
+
+.personal-hero__credentials li:nth-child(1) {
+    animation-delay: 460ms;
+}
+
+.personal-hero__credentials li:nth-child(2) {
+    animation-delay: 540ms;
+}
+
+.personal-hero__credentials li:nth-child(3) {
+    animation-delay: 620ms;
+}
+
+.personal-hero__credentials li:hover {
+    transform: translateY(-3px);
+    border-color: rgb(231 201 143 / 68%);
+    background: rgb(255 255 255 / 13%);
+}
+
+@keyframes home-copy-enter {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes home-portrait-enter {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes home-card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes home-tag-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .personal-hero__content > *,
+    .personal-hero__portrait,
+    .home-overview .home-intro,
+    .home-explore.personal-note,
+    .personal-hero__credentials li {
+        animation: none;
+    }
+
+    .personal-hero__portrait img,
+    .personal-hero__portrait,
+    .home-profile > div,
+    .personal-hero__credentials li {
+        transition: none;
+    }
+}
+
+.dental-info-card,
+.contact-card,
+.team-card {
+    transition: transform 280ms var(--ease-out), border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.program-card__image,
+.news-card__image,
+.team-card img {
+    transition: transform 600ms var(--ease-out);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .dental-info-card:hover,
+    .contact-card:hover,
+    .team-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .team-card:hover img {
+        transform: scale(1.035);
     }
 }

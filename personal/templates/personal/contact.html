@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <section class="contact-page" aria-labelledby="contact-title">
+        <header class="contact-page__heading">
+            <p class="eyebrow">Let’s connect</p>
+            <h2 id="contact-title">{{ title }}</h2>
+            <p>{{ intro }}</p>
+        </header>
+        <div class="contact-grid">
+            <article class="contact-card">
+                <span class="contact-card__label">Email</span>
+                <a href="mailto:{{ email }}">{{ email }}</a>
+            </article>
+            <article class="contact-card">
+                <span class="contact-card__label">Mobile</span>
+                <a href="tel:{{ phone }}">{{ phone }}</a>
+            </article>
+            <article class="contact-card">
+                <span class="contact-card__label">Location</span>
+                <p>{{ location }}</p>
+            </article>
+        </div>
+    </section>
+{% endblock %}

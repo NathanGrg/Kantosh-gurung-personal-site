@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <section class="dental-info-page" aria-labelledby="dental-info-title">
+        <header class="dental-info-page__heading">
+            <div>
+                <p class="eyebrow">Get involved</p>
+                <h2 id="dental-info-title">{{ title }}</h2>
+                <p class="dental-info-page__intro">{{ intro }}</p>
+                {% for paragraph in paragraphs %}
+                    <p class="dental-info-page__note">{{ paragraph }}</p>
+                {% endfor %}
+            </div>
+            <figure class="dental-info-page__image">
+                <img src="{% static image %}" alt="{{ image_alt }}">
+            </figure>
+        </header>
+        <div class="dental-info-page__grid">
+            {% for item in items %}
+                <article class="dental-info-card">
+                    <span class="dental-info-card__number">{{ forloop.counter|stringformat:"02d" }}</span>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

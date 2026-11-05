@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <section class="news-page" aria-labelledby="news-title">
+        <header class="news-heading">
+            <p class="eyebrow">Oral health &amp; everyday care</p>
+            <h2 id="news-title">{{ title }}</h2>
+            <p>{{ intro }}</p>
+        </header>
+
+        <p class="news-disclaimer">{{ disclaimer }}</p>
+
+        <article class="news-feature">
+            <div class="news-feature__image">
+                <img src="{% static featured_story.image %}" alt="{{ featured_story.image_alt }}">
+            </div>
+            <div class="news-feature__body">
+                <p class="news-category">{{ featured_story.category }}</p>
+                <h3>{{ featured_story.title }}</h3>
+                <p>{{ featured_story.excerpt }}</p>
+                <p class="news-meta">Dental wellness <span aria-hidden="true">·</span> {{ featured_story.reading_time }}</p>
+            </div>
+        </article>
+
+        <div class="news-latest-heading">
+            <h3>Latest stories</h3>
+            <span>DENTAL NOTES</span>
+        </div>
+        <div class="news-grid">
+            {% for article in articles %}
+                <article class="news-card">
+                    <img class="news-card__image" src="{% static article.image %}" alt="{{ article.image_alt }}" loading="lazy">
+                    <p class="news-category">{{ article.category }}</p>
+                    <h4>{{ article.title }}</h4>
+                    <p>{{ article.excerpt }}</p>
+                    <p class="news-meta">Dental wellness <span aria-hidden="true">·</span> {{ article.reading_time }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <article class="page-section team-page">
+        <header class="page-section__heading">
+            <p class="eyebrow">Community Health Initiative</p>
+            <h2>{{ title }}</h2>
+        </header>
+        <p class="page-section__intro">{{ intro }}</p>
+        {% for paragraph in paragraphs %}
+            <p>{{ paragraph }}</p>
+        {% endfor %}
+
+        <section class="team-section" aria-labelledby="team-heading">
+            <h3 id="team-heading" style="color: white;">Meet our team</h3>
+            <div class="team-grid">
+                {% for member in team_members %}
+                    <article class="team-card">
+                        <img src="{% static member.image %}" alt="Placeholder portrait for {{ member.role }}">
+                        <h4>{{ member.role }}</h4>
+                        <p>Sample team role</p>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    </article>
+{% endblock %}
