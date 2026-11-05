@@ -3430,3 +3430,10 @@ main {
         transform: scale(1.035);
     }
 }
+
+.navbar__links a[aria-current="page"],
+.js .navbar__links a[aria-current="page"],
+.js .navbar__links a[aria-current="page"]:hover {
+    background: #fff;
+    color: #104e5d;
+}

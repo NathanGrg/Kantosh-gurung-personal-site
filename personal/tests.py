@@ -29,6 +29,14 @@ class SectionPageTitleTests(TestCase):
                 self.assertContains(response, f'<title>{page_title}</title>')
                 self.assertIn('KANTOSH GURUNG', response.content.decode().upper())
                 self.assertContains(response, '<a class="navbar__brand" href="/">')
+                self.assertContains(
+                    response,
+                    f'<a href="{reverse(route_name)}" aria-current="page">',
+                )
+                self.assertEqual(
+                    response.content.decode().count('aria-current="page"'),
+                    1,
+                )
 
     def test_homepage_introduces_kantosh_and_his_work(self):
         response = self.client.get(reverse('base'))
@@ -39,6 +47,10 @@ class SectionPageTitleTests(TestCase):
         self.assertContains(response, 'Shyaulibazaar, Lamjung')
         self.assertContains(response, 'Program-in-charge at Drop Group Nepal')
         self.assertNotContains(response, '>About</a>')
+        self.assertContains(
+            response,
+            f'<a href="{reverse("base")}" aria-current="page">Home</a>',
+        )
 
     def test_about_page_is_removed(self):
         response = self.client.get('/about/')

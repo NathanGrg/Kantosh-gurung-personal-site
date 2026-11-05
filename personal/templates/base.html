@@ -23,13 +23,13 @@
                 <span></span>
             </button>
             <ul class="navbar__links" id="primary-navigation">
-                <li><a href="{% url 'base' %}">Home</a></li>
-                <li><a href="{% url 'program' %}">Program</a></li>
-                <li><a href="{% url 'objectives' %}">Objectives</a></li>
-                <li><a href="{% url 'contributions' %}">Contributions</a></li>
-                <li><a href="{% url 'health_news' %}">Health News</a></li>
-                <li><a href="{% url 'team' %}">Our Team</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'base' %}" {% if request.resolver_match.url_name == "base" %}aria-current="page"{% endif %}>Home</a></li>
+                <li><a href="{% url 'program' %}" {% if request.resolver_match.url_name == "program" %}aria-current="page"{% endif %}>Program</a></li>
+                <li><a href="{% url 'objectives' %}" {% if request.resolver_match.url_name == "objectives" %}aria-current="page"{% endif %}>Objectives</a></li>
+                <li><a href="{% url 'contributions' %}" {% if request.resolver_match.url_name == "contributions" %}aria-current="page"{% endif %}>Contributions</a></li>
+                <li><a href="{% url 'health_news' %}" {% if request.resolver_match.url_name == "health_news" %}aria-current="page"{% endif %}>Health News</a></li>
+                <li><a href="{% url 'team' %}" {% if request.resolver_match.url_name == "team" %}aria-current="page"{% endif %}>Our Team</a></li>
+                <li><a href="{% url 'contact' %}" {% if request.resolver_match.url_name == "contact" %}aria-current="page"{% endif %}>Contact</a></li>
             </ul>
         </nav>
 
