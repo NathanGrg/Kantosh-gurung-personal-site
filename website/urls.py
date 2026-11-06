@@ -21,7 +21,7 @@ from personal import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.base, name='base'),
-    path('program/', views.section, {'page': 'program'}, name='program'),
+    path('programme/', views.section, {'page': 'programme'}, name='programme'),
     path('objectives/', views.section, {'page': 'objectives'}, name='objectives'),
     path('contributions/', views.section, {'page': 'contributions'}, name='contributions'),
     path('health-news/', views.section, {'page': 'health_news'}, name='health_news'),

@@ -4,39 +4,43 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <section class="news-page" aria-labelledby="news-title">
-        <header class="news-heading">
-            <p class="eyebrow">Oral health &amp; everyday care</p>
-            <h2 id="news-title">{{ title }}</h2>
-            <p>{{ intro }}</p>
+    <section class="health-archive" aria-labelledby="health-archive-title">
+        <header class="health-archive__hero">
+            <div class="health-archive__copy">
+                <p class="eyebrow">Drop Group of Nepal <span aria-hidden="true">/</span> Our history</p>
+                <h2 id="health-archive-title">Community work,<br>year by year<span>.</span></h2>
+                <p>{{ intro }}</p>
+                <div class="health-archive__stats" aria-label="Activity archive period">
+                    <div><strong>{{ activities_by_year|length }}</strong><span>years of activity</span></div>
+                    <div><strong>2002–2018</strong><span>community history</span></div>
+                </div>
+            </div>
+            <figure class="health-archive__image">
+                <img src="{% static image %}" alt="{{ image_alt }}">
+                <figcaption>Health, education, and community support across Nepal</figcaption>
+            </figure>
         </header>
 
-        <p class="news-disclaimer">{{ disclaimer }}</p>
-
-        <article class="news-feature">
-            <div class="news-feature__image">
-                <img src="{% static featured_story.image %}" alt="{{ featured_story.image_alt }}">
-            </div>
-            <div class="news-feature__body">
-                <p class="news-category">{{ featured_story.category }}</p>
-                <h3>{{ featured_story.title }}</h3>
-                <p>{{ featured_story.excerpt }}</p>
-                <p class="news-meta">Dental wellness <span aria-hidden="true">·</span> {{ featured_story.reading_time }}</p>
-            </div>
-        </article>
-
-        <div class="news-latest-heading">
-            <h3>Latest stories</h3>
-            <span>DENTAL NOTES</span>
+        <div class="health-archive__intro">
+            <p class="eyebrow">A shared history</p>
+            <h3>Where we’ve worked</h3>
+            <p>Explore DGN’s recorded school, child welfare, community health, and relief activities.</p>
         </div>
-        <div class="news-grid">
-            {% for article in articles %}
-                <article class="news-card">
-                    <img class="news-card__image" src="{% static article.image %}" alt="{{ article.image_alt }}" loading="lazy">
-                    <p class="news-category">{{ article.category }}</p>
-                    <h4>{{ article.title }}</h4>
-                    <p>{{ article.excerpt }}</p>
-                    <p class="news-meta">Dental wellness <span aria-hidden="true">·</span> {{ article.reading_time }}</p>
+
+        <div class="health-timeline">
+            {% for year_group in activities_by_year %}
+                <article class="health-year">
+                    <div class="health-year__marker">
+                        <span>{{ year_group.year }}</span>
+                    </div>
+                    <div class="health-year__content">
+                        <h4>{{ year_group.year }}</h4>
+                        <ul>
+                            {% for activity in year_group.activities %}
+                                <li>{{ activity }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </article>
             {% endfor %}
         </div>

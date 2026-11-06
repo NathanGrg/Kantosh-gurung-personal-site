@@ -2,138 +2,334 @@ from django.shortcuts import render
 
 
 SECTION_CONTENT = {
-    'program': {
-        'title': 'Dental Health Programs',
-        'intro': 'Practical ideas for building confident smiles through oral health education, prevention, and access to care.',
+    'programme': {
+        'title': 'Programme',
+        'intro': 'The main aim is to help and support community members and school children by providing free advice, medication, and treatment for those suffering from poor oral hygiene and other communicable diseases. We also provide sports materials, books, pens, pencils, toothpaste, and toothbrushes to schoolchildren in remote villages. Our support is especially for children from economically disadvantaged families, including those in urban areas of Nepal who need help with health problems.',
         'paragraphs': [
-            'These sample programs highlight ways communities and dental professionals can work together. They are educational examples, not services or medical advice.',
+            'DGN brings dental care, health education, and learning materials closer to schools and communities.',
         ],
-        'programs': [
+        'activities': [
             {
-                'title': 'Oral Health Education',
-                'description': 'Share clear, age-appropriate information about daily brushing, flossing, and keeping up with routine dental visits.',
-                'image': 'images/wa10.jpeg',
-                'image_alt': 'Community members take part in an oral health program',
+                'title': 'Free dental camps',
+                'description': 'School and community health programs that bring dental services closer to people.',
             },
             {
-                'title': 'Children’s Dental Visits',
-                'description': 'Help children feel comfortable at the dentist with welcoming visits, family guidance, and positive oral-health activities.',
-                'image': 'images/wa7.jpeg',
-                'image_alt': 'A health worker examines a child during a dental visit',
+                'title': 'Free advice, treatment, and medication',
+                'description': 'Oral-health guidance, treatment, and medication for community members in need.',
             },
             {
-                'title': 'Community Dental Outreach',
-                'description': 'Connect neighborhoods with oral-health information and guidance on finding local dental services.',
-                'image': 'images/wa17.jpeg',
-                'image_alt': 'A health worker shares resources during community outreach',
+                'title': 'Fillings and extractions',
+                'description': 'Dental filling and extraction services, including GIC and amalgam fillings.',
             },
             {
-                'title': 'Prevention and Early Visits',
-                'description': 'Encourage regular checkups so people can discuss concerns and preventive care with a qualified dental professional.',
-                'image': 'images/wa19.jpeg',
-                'image_alt': 'A close-up view during a dental examination',
+                'title': 'Scaling',
+                'description': 'Dental scaling as part of oral health care.',
             },
             {
-                'title': 'Dental Team Learning',
-                'description': 'Support continuing learning and collaboration among dental professionals to make care more welcoming and accessible.',
-                'image': 'images/wa5.jpeg',
-                'image_alt': 'Community members gather for a health workshop',
+                'title': 'Health education',
+                'description': 'Health education for community members and school children.',
+            },
+            {
+                'title': 'Health awareness programs',
+                'description': 'Programs that raise awareness of health and encourage healthy communities.',
+            },
+            {
+                'title': 'Community participation',
+                'description': 'Community participation programs that bring people together around local health needs.',
+            },
+            {
+                'title': 'Other school activities',
+                'description': 'School activities, including support with sports materials, books, pens, pencils, toothpaste, and toothbrushes.',
             },
         ],
     },
     'objectives': {
         'title': 'Objectives',
-        'intro': 'Our goal is to make good oral-health information and dental care easier to understand and access.',
+        'intro': 'Drop Group of Nepal (DGN) works to improve health, learning, and opportunity in communities across Nepal.',
         'paragraphs': [
-            'These sample objectives focus on prevention, education, and stronger connections with qualified dental professionals.',
+            'With these objectives and messages, DGN invites everyone to unite, contribute, and help build a healthier future for people and communities.',
         ],
         'image': 'images/wa11.jpeg',
         'image_alt': 'Students gather for a community oral health event',
         'items': [
             {
-                'title': 'Build everyday knowledge',
-                'description': 'Make clear, accessible oral-health information available to children, families, and community members.',
+                'title': 'Promote oral health',
+                'description': 'Promote oral health programs for community members and high school students.',
             },
             {
-                'title': 'Encourage preventive care',
-                'description': 'Promote regular dental checkups and conversations with qualified professionals about prevention.',
+                'title': 'Build community awareness',
+                'description': 'Promote health awareness programs and studies in different communities.',
             },
             {
-                'title': 'Improve connections to care',
-                'description': 'Help people learn how to find local dental services and ask about available care options.',
+                'title': 'Support children’s health',
+                'description': 'Promote health programs for primary school children in different schools and places.',
             },
             {
-                'title': 'Create welcoming experiences',
-                'description': 'Support friendly, respectful dental visits where people feel comfortable raising questions.',
+                'title': 'Prevent tooth decay',
+                'description': 'Prevent and control dental caries (tooth decay) across all life stages.',
+            },
+            {
+                'title': 'Promote safe dental care',
+                'description': 'Promote prevention of disease transmission in dental health care settings.',
+            },
+            {
+                'title': 'Support safe maternity',
+                'description': 'Promote health awareness about safe maternity and childbirth.',
+            },
+            {
+                'title': 'Encourage physical and intellectual development',
+                'description': 'Organize sports-goods programs and other useful activities for physical and intellectual development.',
+            },
+            {
+                'title': 'Build skills and livelihoods',
+                'description': 'Run skills-development training and livelihood-focused programs for marginalized women, including widows and people who are poor or otherwise in need.',
             },
         ],
+        'goals_intro': 'DGN’s goals combine access to care, prevention, community education, and practical support.',
+        'goals': [
+            {
+                'title': 'Help people access treatment',
+                'description': 'Provide free treatment to people with low incomes, particularly older people, children, and other community members in need.',
+            },
+            {
+                'title': 'Prevent dental caries',
+                'description': 'Prevent and control dental caries (tooth decay) across all life stages.',
+            },
+            {
+                'title': 'Promote safe dental settings',
+                'description': 'Promote prevention of disease transmission in dental health care settings.',
+            },
+            {
+                'title': 'Strengthen oral health programs',
+                'description': 'Increase oral health program capacity and effectiveness, and help programs improve their reach and impact.',
+            },
+            {
+                'title': 'Bring dental camps to communities',
+                'description': 'Organize dental camps with DGN’s mobile dental unit and team in needy parts of Nepal.',
+            },
+            {
+                'title': 'Teach healthy oral care',
+                'description': 'Provide community health-awareness education and programs about oral and dental health for healthy living.',
+            },
+            {
+                'title': 'Support development',
+                'description': 'Organize sports-goods programs and other useful activities for physical and intellectual development.',
+            },
+            {
+                'title': 'Support women’s livelihoods',
+                'description': 'Run skills-development training and livelihood-focused programs for marginalized women, including widows and people who are poor or otherwise in need.',
+            },
+        ],
+        'goals_vision': 'DGN aims to help build a community where everyone can enjoy good oral health and lead healthy, satisfying lives. We work to strengthen awareness, prevent and control oral diseases and conditions, and support healthy behaviors through knowledge, tools, partnerships, school health, and effective public health programs.',
     },
     'contributions': {
         'title': 'Contributions',
-        'intro': 'Better oral health is a shared effort, and everyone can help make dental education more approachable.',
+        'intro': 'You can contribute to Drop Group of Nepal (DGN) in many ways.',
         'paragraphs': [
-            'Families, educators, dental professionals, and community groups can all help spread reliable oral-health information.',
-            'The ideas below are examples only; this website does not currently offer dental services, events, or volunteer opportunities.',
+            'Become a friend of DGN or a member of the DGN family.',
         ],
         'image': 'images/wa17.jpeg',
         'image_alt': 'A health worker shares information during community outreach',
         'items': [
             {
-                'title': 'Share trusted resources',
-                'description': 'Help families find easy-to-understand oral-health information from reputable dental and public-health sources.',
+                'title': 'Become a friend of DGN',
+                'description': 'Join the community of friends supporting Drop Group of Nepal.',
             },
             {
-                'title': 'Support learning activities',
-                'description': 'Help schools or community groups make oral-health education part of their learning events.',
+                'title': 'Become a DGN family member',
+                'description': 'Become a member of the DGN family and take part in supporting its work.',
             },
             {
-                'title': 'Connect people with care',
-                'description': 'Share information about local dental clinics and ways to ask providers about appointments and services.',
+                'title': 'Support older and low-income people',
+                'description': 'Give support to older people and people with low incomes who are experiencing health problems.',
             },
             {
-                'title': 'Listen and improve',
-                'description': 'Offer feedback on what information would make dental visits and daily oral care easier to navigate.',
+                'title': 'Donate to dental camps',
+                'description': 'Make a financial donation to DGN’s general fund to help support dental camps.',
+            },
+            {
+                'title': 'Organize a fundraiser',
+                'description': 'Organize a fundraising event or another beneficial program in support of DGN’s work.',
+            },
+            {
+                'title': 'Sponsor a program',
+                'description': 'Sponsor an awareness program, dental camp, play and stationery material distribution, or toothbrush and toothpaste distribution program.',
+            },
+            {
+                'title': 'Give a general donation',
+                'description': 'Provide any kind of general donation or support for DGN’s work.',
+            },
+            {
+                'title': 'Spread the word',
+                'description': 'Help share DGN’s work by publishing or sharing information within your network.',
+            },
+            {
+                'title': 'Volunteer in the community',
+                'description': 'Volunteer on a project and help serve people in the community.',
+            },
+            {
+                'title': 'Connect DGN with supporters',
+                'description': 'Help find new sponsors and energetic volunteers who can contribute to serving people in need in Nepal.',
             },
         ],
     },
     'health_news': {
         'title': 'Dental Health News',
-        'intro': 'Dental-health topics and practical reminders for healthier smiles.',
-        'featured_story': {
-            'category': 'ORAL HEALTH',
-            'title': 'Making a dental visit feel more comfortable',
-            'excerpt': 'A welcoming dental visit starts with open communication. Sharing questions and concerns with your dental team can help you understand what to expect.',
-            'reading_time': '3 min read',
-            'image': 'images/wa22.jpeg',
-            'image_alt': 'A dental professional examines a patient',
-        },
-        'articles': [
+        'intro': 'A record of DGN’s community, school, child welfare, health camp, and relief activities.',
+        'image': 'images/wa22.jpeg',
+        'image_alt': 'Community health outreach activity',
+        'activities_by_year': [
             {
-                'category': 'FAMILY DENTAL CARE',
-                'title': 'Helping children feel at ease at the dentist',
-                'excerpt': 'A calm, supportive conversation before an appointment can help children know what to expect. Dental teams can answer questions along the way.',
-                'reading_time': '3 min read',
-                'image': 'images/wa7.jpeg',
-                'image_alt': 'A health worker examines a child during a dental visit',
+                'year': 2018,
+                'activities': [
+                    'Child Welfare & Education (CWE), Lakeside, Pokhara',
+                    'Namaste Children Home, Lakeside, Pokhara',
+                    'Rainbow Children Home, Lakeside, Pokhara',
+                    'Buddha Dahal School for the Deaf, Damauli, Tanahun',
+                    'Sirjana Higher Secondary School for the Deaf, Lekhnath, Pokhara',
+                    'Bhalam Primary School, Bhalam, Kaski',
+                    'Stationery and sports materials distributed at Buddha Dahal School for the Deaf',
+                    'Laxmi Primary School, Laxmi Bazaar, Lamjung',
+                    'Bendheswari Primary School, Shyauli Bazaar, Lamjung',
+                ],
             },
             {
-                'category': 'COMMUNITY',
-                'title': 'Taking oral-health learning into the community',
-                'excerpt': 'Community events can create friendly opportunities to learn about oral health and find out where to seek professional dental care.',
-                'reading_time': '2 min read',
-                'image': 'images/wa10.jpeg',
-                'image_alt': 'Community members take part in an oral health program',
+                'year': 2017,
+                'activities': [
+                    'Child Welfare & Education (CWE), Lakeside, Pokhara',
+                    'Sirjana Higher Secondary School for the Deaf, Lekhnath, Pokhara',
+                    'Namaste Children Home, Lakeside, Pokhara',
+                    'Onni Children Home, Dam Side, Pokhara',
+                    'Rainbow Children Home, Lakeside, Pokhara',
+                    'Bendheswari Primary School, Shyauli Bazaar, Lamjung',
+                    'Laxmi Primary School, Laxmi Bazaar, Lamjung',
+                    'Buddha Deaf School, Tanahun',
+                ],
             },
             {
-                'category': 'PREVENTION',
-                'title': 'Keep routine dental checkups on your calendar',
-                'excerpt': 'Regular visits give you time to discuss your oral health and ask a dental professional what care is right for you.',
-                'reading_time': '3 min read',
-                'image': 'images/wa19.jpeg',
-                'image_alt': 'A close-up view during a dental examination',
+                'year': 2016,
+                'activities': [
+                    'Child Welfare & Education (CWE), Lakeside, Pokhara',
+                    'Dibya Jyoti Secondary School, Nawalparasi',
+                    'Jana Jyoti Secondary School, Gorkha',
+                    'Rainbow Children Home, Lakeside, Pokhara',
+                    'Namaste Children Home, Lakeside, Pokhara',
+                    'Onni Children Home, Dam Side, Pokhara',
+                    'Saraswati Mandir Higher Secondary School, Ghalechhap, Tanahun',
+                    'Bhumeswari Primary School, Dordi, Lamjung',
+                    'Saileswari Primary School, Chisankhu, Lamjung',
+                    'Laxmi Primary School, Laxmi Bazaar, Lamjung',
+                ],
+            },
+            {
+                'year': 2015,
+                'activities': [
+                    'Child Welfare & Education (CWE), Lakeside, Pokhara',
+                    'Medical camp and relief-material distribution for earthquake victims',
+                    'Ghyachock VDC, Gorkha',
+                    'Khangsang (Beshi) VDC, Sindhuli',
+                    'Kunbu Kasthali VDC, Ramechhap',
+                    'Landslide victims, Lumley, Kaski',
+                    'Mahendra Primary School and Manakamana Primary School, Sundar Bazaar, Lamjung',
+                    'Rainbow Children Home, Lakeside, Pokhara',
+                    'Onni Children Home, Dam Side, Pokhara',
+                    'Namaste Community Foundation, Lakeside, Pokhara',
+                    'Sarada Sadan Primary School, Handikhola, Lamjung',
+                ],
+            },
+            {
+                'year': 2014,
+                'activities': [
+                    'Child Welfare & Education (CWE), Lakeside, Pokhara',
+                    'Rainbow Children Home, Lakeside, Pokhara',
+                    'Namaste Children Home, Lakeside, Pokhara',
+                    'Onni Children Home, Dam Side, Pokhara',
+                    'Students and local people of Kumbu Kasthali, Ramechhap',
+                ],
+            },
+            {
+                'year': 2013,
+                'activities': [
+                    'Child Welfare & Education (CWE), Lakeside, Pokhara',
+                    'Rainbow Children Home, Lakeside, Pokhara',
+                    'Namaste Children Home, Lakeside, Pokhara',
+                    'Onni Children Home, Dam Side, Pokhara',
+                    'Kathmandu College students',
+                    'EUROD Nepal',
+                    'Janata Secondary School, Kungbu Kasthali, Ramechhap',
+                    'Community people of Kungbu Kasthali, Ramechhap',
+                    'Shree Hom Raj Lohani Sarada Higher Secondary School, Bhanu, Tanahun',
+                    'Shree Saraswati Mandir Higher Secondary School, Ghalechap, Tanahun',
+                    'Shree Shiva Primary School, Chandrawati, Tanahun',
+                ],
+            },
+            {
+                'year': 2012,
+                'activities': [
+                    'Namaste Children Home, Lakeside, Pokhara',
+                    'Onni Children Home, Dam Side, Pokhara',
+                    'Rainbow Children Home, Pokhara',
+                    'Sree Satyawati Devi Lower Secondary School, Bhansar, Tanahun',
+                    'Kathmandu College students',
+                    'EUROD Nepal, Kathmandu',
+                ],
+            },
+            {
+                'year': 2011,
+                'activities': [
+                    'Community people, Mirlung, Tanahun',
+                    'Rainbow Children Home, Pokhara',
+                    'Child Welfare & Education, Lakeside, Pokhara',
+                    'Bihya Nikunja Higher School, Mirlung, Tanahun',
+                    'Pal Tashi Chyyoling Monastery, Pokhara',
+                ],
+            },
+            {
+                'year': 2010,
+                'activities': [
+                    'Community people, Mirlung, Tanahun',
+                    'Quality of Life Nepal, Sarangkot',
+                    'Namaste Children Home, Lakeside, Pokhara',
+                    'Onni Children Home, Dam Side, Pokhara',
+                    'Tahara, Nepal, Pokhara',
+                ],
+            },
+            {
+                'year': 2009,
+                'activities': [
+                    'Sewa Sadan Ma. Vi., Purankot, Lamjung',
+                    'Siba Sakti Primary School, Nalma, Lamjung',
+                    'Child Welfare & Education, Lakeside, Pokhara',
+                ],
+            },
+            {
+                'year': 2007,
+                'activities': ['Daduwa Durcha Ma. Vi., Daduwa, Lamjung'],
+            },
+            {
+                'year': 2006,
+                'activities': ['Saraswati Sadan Ma. Vi., Sindure, Lamjung'],
+            },
+            {
+                'year': 2003,
+                'activities': [
+                    'Ghaleutter Kanya Ma. Vi., Bagum, Lamjung',
+                    'Tribhuwan Bidyasram Ma. Vi., Bhujung, Lamjung',
+                    'Pas Gaun Thanti Ma. Vi., Pasgaun, Lamjung',
+                    'Community people, Bhoje, Lamjung',
+                    'Suryo Daya Lower Secondary School, Ghamrang, Lamjung',
+                    'Buddodaya Ma. Vi., Gilung, Lamjung',
+                ],
+            },
+            {
+                'year': 2002,
+                'activities': [
+                    'Annapurna Ma. Vi., Nalma, Lamjung',
+                    'Sarada Ma. Vi., Maling, Lamjung',
+                    'Janajyoti Ma. Vi., Baglung Pani, Lamjung',
+                ],
             },
         ],
-        'disclaimer': 'General educational information only; it is not a diagnosis or a substitute for advice from your dentist. Ask a qualified dental professional about your individual needs.',
     },
     'team': {
         'title': 'Our Team',
@@ -163,8 +359,8 @@ SECTION_CONTENT = {
     'contact': {
         'title': 'Contact',
         'intro': 'I’d be happy to hear from you. Reach out by email or phone, or find me in Pokhara, Nepal.',
-        'email': 'nathangrg30@gmail.com',
-        'phone': '+9779819129536',
+        'email': 'kantoshgurung@ymail.com',
+        'phone': '+9779846155858',
         'location': 'Pokhara, Nepal',
     },
 }

@@ -2805,6 +2805,99 @@ main {
     }
 }
 
+.dental-info-page__extra {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.dental-info-page__extra-heading {
+    max-width: 760px;
+    margin-bottom: 1.25rem;
+}
+
+.dental-info-page__extra-heading .eyebrow {
+    margin-bottom: 0.35rem;
+    color: #087f82;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.dental-info-page__extra-heading h3 {
+    margin: 0;
+    color: var(--color-navy);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+
+.dental-info-page__extra-heading > p:last-child,
+.dental-info-page__vision {
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.dental-info-page__vision {
+    margin: 1.5rem 0 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid #42aaa3;
+    border-radius: 0.5rem;
+    background: #edf6f5;
+}
+
+.news-archive__image {
+    max-height: 340px;
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid var(--color-border);
+    border-radius: 1.25rem;
+    background: #e7f2f1;
+}
+
+.news-archive__image img {
+    display: block;
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    object-position: center 45%;
+}
+
+.news-archive {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.news-archive__year {
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 10px 28px rgb(22 53 66 / 5%);
+}
+
+.news-archive__year h4 {
+    margin: 0 0 0.75rem;
+    color: #087f82;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.8rem;
+}
+
+.news-archive__year ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--color-muted);
+    line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+    .news-archive {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Homepage feature treatment */
 .personal-hero {
     min-height: 570px;
@@ -3436,4 +3529,888 @@ main {
 .js .navbar__links a[aria-current="page"]:hover {
     background: #fff;
     color: #104e5d;
+}
+
+.objectives-page,
+.contributions-page,
+.health-archive {
+    width: min(100% - 2rem, 1200px);
+    margin: clamp(2rem, 6vw, 4.5rem) auto;
+}
+
+.objectives-hero,
+.contributions-hero,
+.health-archive__hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+    overflow: hidden;
+    padding: clamp(1.75rem, 5vw, 4rem);
+    border: 1px solid #dce8e9;
+    border-radius: 1.75rem;
+    background:
+        radial-gradient(ellipse at 2% 100%, rgb(185 229 222 / 36%), transparent 46%),
+        linear-gradient(135deg, #fff 0%, #f7fbfa 68%, #edf7f6 100%);
+    box-shadow: var(--shadow-card);
+}
+
+.objectives-hero__copy .eyebrow,
+.contributions-hero__copy .eyebrow,
+.health-archive__copy .eyebrow,
+.objectives-section__heading .eyebrow,
+.contributions-section-heading .eyebrow,
+.contributions-callout .eyebrow,
+.health-archive__intro .eyebrow {
+    margin: 0 0 0.65rem;
+    color: #087f82;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.objectives-hero__copy h2,
+.contributions-hero__copy h2,
+.health-archive__copy h2 {
+    margin: 0;
+    color: var(--color-navy);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(3.2rem, 7vw, 5.8rem);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 0.94;
+}
+
+.objectives-hero__copy h2 span,
+.contributions-hero__copy h2 span,
+.health-archive__copy h2 span {
+    color: #087f82;
+}
+
+.objectives-hero__intro,
+.contributions-hero__intro {
+    max-width: 600px;
+    margin: 1.25rem 0 0.75rem;
+    color: #385762;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.objectives-hero__note,
+.contributions-hero__note,
+.health-archive__copy > p:not(.eyebrow) {
+    max-width: 610px;
+    margin: 0.5rem 0 0;
+    color: var(--color-muted);
+    line-height: 1.75;
+}
+
+.objectives-hero__image,
+.contributions-hero__image,
+.health-archive__image {
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 1.2rem;
+    background: #e7f2f1;
+    box-shadow: 0 20px 50px rgb(22 53 66 / 12%);
+}
+
+.objectives-hero__image::after,
+.contributions-hero__image::after,
+.health-archive__image::after {
+    position: absolute;
+    inset: 30% 0 0;
+    background: linear-gradient(transparent, rgb(9 39 48 / 72%));
+    content: "";
+}
+
+.objectives-hero__image img,
+.contributions-hero__image img,
+.health-archive__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+.objectives-hero__image figcaption,
+.contributions-hero__image figcaption,
+.health-archive__image figcaption {
+    position: absolute;
+    z-index: 1;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.objectives-section,
+.objectives-goals {
+    margin-top: clamp(3rem, 7vw, 5.5rem);
+}
+
+.objectives-section__heading {
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+}
+
+.objectives-section__heading h3,
+.contributions-section-heading h3,
+.health-archive__intro h3 {
+    margin: 0;
+    color: var(--color-navy);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+}
+
+.objectives-section__heading > p:last-child,
+.health-archive__intro > p:last-child {
+    margin: 0.65rem 0 0;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.objective-card,
+.contribution-card {
+    position: relative;
+    min-height: 205px;
+    padding: 1.4rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 10px 28px rgb(22 53 66 / 5%);
+    transition: transform 220ms var(--ease-out), border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.objective-card::before,
+.contribution-card::before {
+    position: absolute;
+    top: 0;
+    right: 1.4rem;
+    left: 1.4rem;
+    height: 3px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, #087f82, #a5d9d3);
+    content: "";
+}
+
+.objective-card__number,
+.contribution-card__number {
+    display: inline-flex;
+    width: 2.4rem;
+    height: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #edf6f5;
+    color: #087f82;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.objective-card h4,
+.contribution-card h4 {
+    margin: 1rem 0 0.5rem;
+    color: var(--color-navy);
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.objective-card p,
+.contribution-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.objectives-goals {
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid #dce8e9;
+    border-radius: 1.5rem;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgb(185 229 222 / 32%), transparent 42%),
+        #f2f8f7;
+}
+
+.objectives-goals .objectives-section__heading {
+    margin-bottom: 1.5rem;
+}
+
+.objectives-goals__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.objectives-goal {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.9rem;
+    padding: 1.15rem;
+    border: 1px solid rgb(220 232 233 / 85%);
+    border-radius: 0.85rem;
+    background: rgb(255 255 255 / 88%);
+}
+
+.objectives-goal__number {
+    display: grid;
+    width: 2.4rem;
+    height: 2.4rem;
+    place-items: center;
+    border-radius: 0.7rem;
+    background: #e3f2f0;
+    color: #087f82;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.objectives-goal h4 {
+    margin: 0 0 0.3rem;
+    color: var(--color-navy);
+    font-size: 1rem;
+}
+
+.objectives-goal p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.objectives-vision {
+    margin: 1.25rem 0 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid #087f82;
+    border-radius: 0.6rem;
+    background: #fff;
+    color: #385762;
+    line-height: 1.75;
+}
+
+.contributions-hero {
+    background:
+        radial-gradient(ellipse at 100% 0%, rgb(244 220 166 / 28%), transparent 42%),
+        linear-gradient(135deg, #fff 0%, #fbfaf6 70%, #f6f1e4 100%);
+}
+
+.contributions-hero__copy .eyebrow,
+.contributions-callout .eyebrow {
+    color: #9a6a18;
+}
+
+.contributions-hero__copy h2 span {
+    color: #c28b2c;
+}
+
+.contributions-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: clamp(2.5rem, 6vw, 4rem) 0 1.25rem;
+}
+
+.contributions-section-heading .eyebrow {
+    color: #9a6a18;
+}
+
+.contributions-section-heading > span {
+    padding-bottom: 0.35rem;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.contributions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.contribution-card::before {
+    background: linear-gradient(90deg, #b27b21, #ebd8a8);
+}
+
+.contribution-card__number {
+    background: #faf3e3;
+    color: #946315;
+}
+
+.contribution-card:hover {
+    transform: translateY(-4px);
+    border-color: #e6d4a9;
+    box-shadow: 0 18px 38px rgb(82 62 25 / 10%);
+}
+
+.contributions-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 1.25rem;
+    background:
+        radial-gradient(ellipse at 95% 0%, rgb(91 183 177 / 22%), transparent 45%),
+        #10384a;
+    color: #fff;
+}
+
+.contributions-callout .eyebrow {
+    color: #e7c98f;
+}
+
+.contributions-callout h3 {
+    margin: 0;
+    color: #fff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    line-height: 1.05;
+}
+
+.contributions-callout > div > p:last-child {
+    max-width: 650px;
+    margin: 0.65rem 0 0;
+    color: #d3e2e4;
+    line-height: 1.65;
+}
+
+.contributions-callout a {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.9rem 1.15rem;
+    border-radius: 999px;
+    background: #fff;
+    color: #10384a;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.contributions-callout a:hover {
+    transform: translateY(-2px);
+    background: #f5e9cc;
+}
+
+.health-archive__hero {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+    background:
+        radial-gradient(ellipse at 0% 100%, rgb(185 229 222 / 34%), transparent 44%),
+        linear-gradient(135deg, #fff, #f3f8f7);
+}
+
+.health-archive__copy h2 {
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 0.99;
+}
+
+.health-archive__copy > p:not(.eyebrow) {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+}
+
+.health-archive__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.75rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #dce8e9;
+}
+
+.health-archive__stats div {
+    display: grid;
+    gap: 0.15rem;
+}
+
+.health-archive__stats strong {
+    color: #087f82;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.health-archive__stats span {
+    color: var(--color-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.health-archive__image {
+    min-height: 370px;
+}
+
+.health-archive__image img {
+    min-height: 370px;
+}
+
+.health-archive__intro {
+    margin: clamp(2.5rem, 6vw, 4rem) 0 1.5rem;
+}
+
+.health-timeline {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+}
+
+.health-timeline::before {
+    position: absolute;
+    top: 1.2rem;
+    bottom: 1.2rem;
+    left: 5.35rem;
+    width: 2px;
+    background: linear-gradient(#73c2bb, #dce8e9);
+    content: "";
+}
+
+.health-year {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.health-year__marker {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.2rem;
+}
+
+.health-year__marker span {
+    display: grid;
+    width: 4.3rem;
+    height: 4.3rem;
+    place-items: center;
+    border: 5px solid #f5f8f8;
+    border-radius: 50%;
+    background: #087f82;
+    color: #fff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 5px 16px rgb(8 127 130 / 20%);
+}
+
+.health-year__content {
+    padding: 1.35rem 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 53 66 / 4%);
+}
+
+.health-year__content h4 {
+    margin: 0 0 0.9rem;
+    color: var(--color-navy);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.health-year__content ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.health-year__content li {
+    position: relative;
+    padding-left: 1rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.health-year__content li::before {
+    position: absolute;
+    top: 0.58em;
+    left: 0;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: #70bdb5;
+    content: "";
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .objective-card:hover {
+        transform: translateY(-4px);
+        border-color: #a6d7d2;
+        box-shadow: 0 18px 38px rgb(22 53 66 / 10%);
+    }
+}
+
+@media (max-width: 950px) {
+    .objectives-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contributions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .health-archive__hero {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+    }
+
+    .health-year__content ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .objectives-page,
+    .contributions-page,
+    .health-archive {
+        width: calc(100% - 1.25rem);
+        margin-top: 1.25rem;
+    }
+
+    .objectives-hero,
+    .contributions-hero,
+    .health-archive__hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: clamp(1.25rem, 5vw, 2rem);
+        border-radius: 1.25rem;
+    }
+
+    .objectives-hero__image,
+    .contributions-hero__image,
+    .health-archive__image,
+    .objectives-hero__image img,
+    .contributions-hero__image img,
+    .health-archive__image img {
+        min-height: 260px;
+    }
+
+    .objectives-goals__list {
+        grid-template-columns: 1fr;
+    }
+
+    .contributions-callout {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .health-year {
+        grid-template-columns: 3.4rem minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+
+    .health-timeline::before {
+        left: 1.7rem;
+    }
+
+    .health-year__marker {
+        justify-content: flex-start;
+    }
+
+    .health-year__marker span {
+        width: 3.4rem;
+        height: 3.4rem;
+        border-width: 4px;
+        font-size: 0.95rem;
+    }
+
+    .health-year__content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .objectives-grid,
+    .contributions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .objective-card,
+    .contribution-card {
+        min-height: 0;
+    }
+
+    .contributions-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .health-year {
+        grid-template-columns: 2.7rem minmax(0, 1fr);
+        gap: 0.55rem;
+    }
+
+    .health-timeline::before {
+        left: 1.35rem;
+    }
+
+    .health-year__marker span {
+        width: 2.7rem;
+        height: 2.7rem;
+        font-size: 0.8rem;
+    }
+}
+
+.programme-page {
+    width: min(100% - 2rem, 1200px);
+    margin: clamp(2rem, 6vw, 4.5rem) auto;
+}
+
+.programme-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+    overflow: hidden;
+    padding: clamp(1.75rem, 5vw, 4rem);
+    border: 1px solid #dce8e9;
+    border-radius: 1.75rem;
+    background:
+        radial-gradient(ellipse at 2% 100%, rgb(185 229 222 / 36%), transparent 46%),
+        linear-gradient(135deg, #fff 0%, #f7fbfa 68%, #edf7f6 100%);
+    box-shadow: var(--shadow-card);
+}
+
+.programme-hero__copy .eyebrow,
+.programme-activities__heading .eyebrow {
+    margin: 0 0 0.65rem;
+    color: #087f82;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.programme-hero__copy h2 {
+    margin: 0;
+    color: var(--color-navy);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(3.2rem, 7vw, 5.8rem);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 0.94;
+}
+
+.programme-hero__copy h2 span {
+    color: #087f82;
+}
+
+.programme-hero__intro {
+    max-width: 680px;
+    margin: 1.25rem 0 0.75rem;
+    color: #385762;
+    font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.programme-hero__note {
+    margin: 0.6rem 0 0;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.programme-hero__image {
+    position: relative;
+    min-height: 370px;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 1.2rem;
+    background: #e7f2f1;
+    box-shadow: 0 20px 50px rgb(22 53 66 / 12%);
+}
+
+.programme-hero__image::after {
+    position: absolute;
+    inset: 30% 0 0;
+    background: linear-gradient(transparent, rgb(9 39 48 / 72%));
+    content: "";
+}
+
+.programme-hero__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 370px;
+    object-fit: cover;
+}
+
+.programme-hero__image figcaption {
+    position: absolute;
+    z-index: 1;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.programme-activities {
+    margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.programme-activities__heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.programme-activities__heading h3 {
+    margin: 0;
+    color: var(--color-navy);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.programme-activities__heading h3 span {
+    color: #087f82;
+}
+
+.programme-activities__heading > p {
+    max-width: 380px;
+    margin: 0 0 0.25rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.programme-activities__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.programme-activity {
+    position: relative;
+    min-height: 205px;
+    padding: 1.4rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 10px 28px rgb(22 53 66 / 5%);
+    transition: transform 220ms var(--ease-out), border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.programme-activity::before {
+    position: absolute;
+    top: 0;
+    right: 1.4rem;
+    left: 1.4rem;
+    height: 3px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, #087f82, #a5d9d3);
+    content: "";
+}
+
+.programme-activity__number {
+    display: inline-flex;
+    width: 2.4rem;
+    height: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #edf6f5;
+    color: #087f82;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.programme-activity h4 {
+    margin: 1rem 0 0.5rem;
+    color: var(--color-navy);
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.programme-activity p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .programme-activity:hover {
+        transform: translateY(-4px);
+        border-color: #a6d7d2;
+        box-shadow: 0 18px 38px rgb(22 53 66 / 10%);
+    }
+}
+
+@media (max-width: 950px) {
+    .programme-activities__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .programme-page {
+        width: calc(100% - 1.25rem);
+        margin-top: 1.25rem;
+    }
+
+    .programme-hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: clamp(1.25rem, 5vw, 2rem);
+        border-radius: 1.25rem;
+    }
+
+    .programme-hero__image,
+    .programme-hero__image img {
+        min-height: 260px;
+    }
+
+    .programme-activities__heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .programme-activities__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .programme-activity {
+        min-height: 0;
+    }
 }

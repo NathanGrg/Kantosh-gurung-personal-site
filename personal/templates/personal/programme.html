@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <section class="programme-page" aria-labelledby="programme-title">
+        <header class="programme-hero">
+            <div class="programme-hero__copy">
+                <p class="eyebrow">Drop Group of Nepal <span aria-hidden="true">/</span> Our work</p>
+                <h2 id="programme-title">{{ title }}<span>.</span></h2>
+                <p class="programme-hero__intro">{{ intro }}</p>
+                {% for paragraph in paragraphs %}
+                    <p class="programme-hero__note">{{ paragraph }}</p>
+                {% endfor %}
+            </div>
+            <figure class="programme-hero__image">
+                <img src="{% static 'images/wa10.jpeg' %}" alt="Community members participating in a health program">
+                <figcaption>Health support for schools and communities</figcaption>
+            </figure>
+        </header>
+
+        <section class="programme-activities" aria-labelledby="programme-activities-title">
+            <header class="programme-activities__heading">
+                <div>
+                    <p class="eyebrow">Care, education, and community</p>
+                    <h3 id="programme-activities-title">Now we are<span> ...</span></h3>
+                </div>
+                <p>Our current activities support healthier lives for children, families, and communities.</p>
+            </header>
+            <div class="programme-activities__grid">
+                {% for activity in activities %}
+                    <article class="programme-activity">
+                        <span class="programme-activity__number" aria-hidden="true">{{ forloop.counter|stringformat:"02d" }}</span>
+                        <h4>{{ activity.title }}</h4>
+                        <p>{{ activity.description }}</p>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    </section>
+{% endblock %}

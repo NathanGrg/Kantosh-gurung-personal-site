@@ -4,28 +4,46 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <section class="dental-info-page" aria-labelledby="dental-info-title">
-        <header class="dental-info-page__heading">
-            <div>
-                <p class="eyebrow">Get involved</p>
-                <h2 id="dental-info-title">{{ title }}</h2>
-                <p class="dental-info-page__intro">{{ intro }}</p>
+    <section class="contributions-page" aria-labelledby="contributions-title">
+        <header class="contributions-hero">
+            <div class="contributions-hero__copy">
+                <p class="eyebrow">Many hands, one community</p>
+                <h2 id="contributions-title">Make a difference<span>.</span></h2>
+                <p class="contributions-hero__intro">{{ intro }}</p>
                 {% for paragraph in paragraphs %}
-                    <p class="dental-info-page__note">{{ paragraph }}</p>
+                    <p class="contributions-hero__note">{{ paragraph }}</p>
                 {% endfor %}
             </div>
-            <figure class="dental-info-page__image">
+            <figure class="contributions-hero__image">
                 <img src="{% static image %}" alt="{{ image_alt }}">
+                <figcaption>Every contribution helps strengthen community care.</figcaption>
             </figure>
         </header>
-        <div class="dental-info-page__grid">
+
+        <div class="contributions-section-heading">
+            <div>
+                <p class="eyebrow">Choose how to help</p>
+                <h3>Be part of the work</h3>
+            </div>
+            <span>Ways to contribute</span>
+        </div>
+        <div class="contributions-grid">
             {% for item in items %}
-                <article class="dental-info-card">
-                    <span class="dental-info-card__number">{{ forloop.counter|stringformat:"02d" }}</span>
-                    <h3>{{ item.title }}</h3>
+                <article class="contribution-card">
+                    <span class="contribution-card__number" aria-hidden="true">{{ forloop.counter|stringformat:"02d" }}</span>
+                    <h4>{{ item.title }}</h4>
                     <p>{{ item.description }}</p>
                 </article>
             {% endfor %}
         </div>
+
+        <aside class="contributions-callout" aria-label="Get in touch">
+            <div>
+                <p class="eyebrow">Let’s work together</p>
+                <h3>Have a way you’d like to help?</h3>
+                <p>Get in touch with DGN to talk about supporting a program, volunteering, or sharing our work.</p>
+            </div>
+            <a href="{% url 'contact' %}">Contact DGN <span aria-hidden="true">→</span></a>
+        </aside>
     </section>
 {% endblock %}
