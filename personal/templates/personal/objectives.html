@@ -7,12 +7,13 @@
     <section class="objectives-page" aria-labelledby="objectives-title">
         <header class="objectives-hero">
             <div class="objectives-hero__copy">
-                <p class="eyebrow"> Our purpose</p>
+                <p class="eyebrow">Our purpose</p>
                 <h2 id="objectives-title">{{ title }}<span>.</span></h2>
                 <p class="objectives-hero__intro">{{ intro }}</p>
                 {% for paragraph in paragraphs %}
                     <p class="objectives-hero__note">{{ paragraph }}</p>
                 {% endfor %}
+                <a class="objectives-hero__link" href="#objectives-list-title">Explore our objectives <span aria-hidden="true">↓</span></a>
             </div>
             <figure class="objectives-hero__image">
                 <img src="{% static image %}" alt="{{ image_alt }}">

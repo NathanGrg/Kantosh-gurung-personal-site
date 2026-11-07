@@ -13,6 +13,7 @@
                 {% for paragraph in paragraphs %}
                     <p class="contributions-hero__note">{{ paragraph }}</p>
                 {% endfor %}
+                <a class="contributions-hero__link" href="#contributions-options">Find your way to help <span aria-hidden="true">↓</span></a>
             </div>
             <figure class="contributions-hero__image">
                 <img src="{% static image %}" alt="{{ image_alt }}">
@@ -20,7 +21,7 @@
             </figure>
         </header>
 
-        <div class="contributions-section-heading">
+        <div class="contributions-section-heading" id="contributions-options">
             <div>
                 <p class="eyebrow">Choose how to help</p>
                 <h3>Be part of the work</h3>

@@ -44,6 +44,7 @@ SECTION_CONTENT = {
     },
     'objectives': {
         'title': 'Objectives',
+        'intro': 'We work with communities to improve oral health, expand health awareness, and create opportunities for children and families.',
         'paragraphs': [
         ],
         'image': 'images/wa11.jpeg',
