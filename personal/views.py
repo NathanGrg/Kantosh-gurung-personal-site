@@ -6,7 +6,6 @@ SECTION_CONTENT = {
         'title': 'Programme',
         'intro': 'The main aim is to help and support community members and school children by providing free advice, medication, and treatment for those suffering from poor oral hygiene and other communicable diseases. We also provide sports materials, books, pens, pencils, toothpaste, and toothbrushes to schoolchildren in remote villages. Our support is especially for children from economically disadvantaged families, including those in urban areas of Nepal who need help with health problems.',
         'paragraphs': [
-            'DGN brings dental care, health education, and learning materials closer to schools and communities.',
         ],
         'activities': [
             {
@@ -45,9 +44,7 @@ SECTION_CONTENT = {
     },
     'objectives': {
         'title': 'Objectives',
-        'intro': 'Drop Group of Nepal (DGN) works to improve health, learning, and opportunity in communities across Nepal.',
         'paragraphs': [
-            'With these objectives and messages, DGN invites everyone to unite, contribute, and help build a healthier future for people and communities.',
         ],
         'image': 'images/wa11.jpeg',
         'image_alt': 'Students gather for a community oral health event',
@@ -85,7 +82,7 @@ SECTION_CONTENT = {
                 'description': 'Run skills-development training and livelihood-focused programs for marginalized women, including widows and people who are poor or otherwise in need.',
             },
         ],
-        'goals_intro': 'DGN’s goals combine access to care, prevention, community education, and practical support.',
+        'goals_intro': 'Our goals combine access to care, prevention, community education, and practical support.',
         'goals': [
             {
                 'title': 'Help people access treatment',
@@ -120,24 +117,24 @@ SECTION_CONTENT = {
                 'description': 'Run skills-development training and livelihood-focused programs for marginalized women, including widows and people who are poor or otherwise in need.',
             },
         ],
-        'goals_vision': 'DGN aims to help build a community where everyone can enjoy good oral health and lead healthy, satisfying lives. We work to strengthen awareness, prevent and control oral diseases and conditions, and support healthy behaviors through knowledge, tools, partnerships, school health, and effective public health programs.',
+        'goals_vision': 'We aim to help build a community where everyone can enjoy good oral health and lead healthy, satisfying lives. We work to strengthen awareness, prevent and control oral diseases and conditions, and support healthy behaviors through knowledge, tools, partnerships, school health, and effective public health programs.',
     },
     'contributions': {
         'title': 'Contributions',
-        'intro': 'You can contribute to Drop Group of Nepal (DGN) in many ways.',
+        'intro': 'You can contribute in many ways.',
         'paragraphs': [
-            'Become a friend of DGN or a member of the DGN family.',
+            'Become a friend or a member of the family.',
         ],
         'image': 'images/wa17.jpeg',
         'image_alt': 'A health worker shares information during community outreach',
         'items': [
             {
-                'title': 'Become a friend of DGN',
-                'description': 'Join the community of friends supporting Drop Group of Nepal.',
+                'title': 'Become a friend',
+                'description': 'Join the community.',
             },
             {
-                'title': 'Become a DGN family member',
-                'description': 'Become a member of the DGN family and take part in supporting its work.',
+                'title': 'Become a family member',
+                'description': 'Become a member and take part in supporting its work.',
             },
             {
                 'title': 'Support older and low-income people',
@@ -145,11 +142,11 @@ SECTION_CONTENT = {
             },
             {
                 'title': 'Donate to dental camps',
-                'description': 'Make a financial donation to DGN’s general fund to help support dental camps.',
+                'description': 'Make a financial donation to our general fund to help support dental camps.',
             },
             {
                 'title': 'Organize a fundraiser',
-                'description': 'Organize a fundraising event or another beneficial program in support of DGN’s work.',
+                'description': 'Organize a fundraising event or another beneficial program in support of our work.',
             },
             {
                 'title': 'Sponsor a program',
@@ -157,25 +154,25 @@ SECTION_CONTENT = {
             },
             {
                 'title': 'Give a general donation',
-                'description': 'Provide any kind of general donation or support for DGN’s work.',
+                'description': 'Provide any kind of general donation or support for our work.',
             },
             {
                 'title': 'Spread the word',
-                'description': 'Help share DGN’s work by publishing or sharing information within your network.',
+                'description': 'Help share work by publishing or sharing information within your network.',
             },
             {
                 'title': 'Volunteer in the community',
                 'description': 'Volunteer on a project and help serve people in the community.',
             },
             {
-                'title': 'Connect DGN with supporters',
+                'title': 'Connect with supporters',
                 'description': 'Help find new sponsors and energetic volunteers who can contribute to serving people in need in Nepal.',
             },
         ],
     },
     'health_news': {
         'title': 'Dental Health News',
-        'intro': 'A record of DGN’s community, school, child welfare, health camp, and relief activities.',
+        'intro': 'A record of our community, school, child welfare, health camp, and relief activities.',
         'image': 'images/wa22.jpeg',
         'image_alt': 'Community health outreach activity',
         'activities_by_year': [
@@ -359,7 +356,7 @@ SECTION_CONTENT = {
     'contact': {
         'title': 'Contact',
         'intro': 'I’d be happy to hear from you. Reach out by email or phone, or find me in Pokhara, Nepal.',
-        'email': 'kantoshgurung@ymail.com',
+        'email': 'kantgrg@gmail.com',
         'phone': '+9779846155858',
         'location': 'Pokhara, Nepal',
     },
