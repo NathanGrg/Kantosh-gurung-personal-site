@@ -8,8 +8,8 @@
     --color-muted: #526b78;
     --color-navy: #123047;
     --color-violet: #087f8c;
-    --color-lavender: #bfe9e5;
-    --color-paper: #f2fafa;
+    --color-lavender: #5a92c0;
+    --color-paper: #75a5ca;
     --color-border: #d7e8e8;
     --shadow-card: 0 24px 60px rgb(22 35 64 / 10%);
     --ease-out: cubic-bezier(0.2, 0.75, 0.25, 1);
@@ -23,9 +23,9 @@ body {
     min-height: 100dvh;
     flex-direction: column;
     margin: 0;
-    background: rgba(242, 250, 250, 0.98);
+    background: rgba(65, 111, 171, 0.98);
     color: var(--color-ink);
-    font-family: "Manrope", sans-serif;
+    font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -33,9 +33,9 @@ body::before {
     position: fixed;
     z-index: -1;
     background:
-        radial-gradient(ellipse at 12% 18%, rgb(88 198 193 / 36%), transparent 34%),
-        radial-gradient(ellipse at 88% 38%, rgb(8 127 140 / 20%), transparent 38%),
-        radial-gradient(ellipse at 48% 92%, rgb(191 233 229 / 42%), transparent 40%);
+        radial-gradient(ellipse at 12% 18%, rgba(88, 119, 198, 0.36), transparent 34%),
+        radial-gradient(ellipse at 88% 38%, rgba(61, 89, 159, 0.2), transparent 38%),
+        radial-gradient(ellipse at 48% 92%, rgba(24, 70, 130, 0.42), transparent 40%);
     content: "";
     filter: blur(48px);
     inset: -48px;
@@ -1753,7 +1753,7 @@ main {
 .personal-hero h2,
 .home-overview h2,
 .about-page h2 {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
 
@@ -1984,7 +1984,7 @@ main {
     bottom: 1.6rem;
     left: 1.25rem;
     color: #fff;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(1.7rem, 3vw, 2.35rem);
     font-weight: 600;
 }
@@ -2271,7 +2271,7 @@ body {
 }
 
 body {
-    background: #f5f8f8;
+    background: #a6b0cd;
     color: var(--color-ink);
 }
 
@@ -2401,7 +2401,7 @@ main {
 }
 
 .home-explore h2 {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     font-weight: 600;
 }
@@ -2441,7 +2441,7 @@ main {
 .team-page #team-heading {
     margin: 2rem 0 1rem;
     color: var(--color-navy) !important;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: 2rem;
 }
 
@@ -2630,7 +2630,7 @@ main {
 
 .news-heading h2 {
     margin: 0.25rem 0 0.75rem;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(2.8rem, 6vw, 4.8rem);
     font-weight: 600;
     letter-spacing: -0.035em;
@@ -2822,7 +2822,7 @@ main {
 .dental-info-page__extra-heading h3 {
     margin: 0;
     color: var(--color-navy);
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.1;
 }
@@ -2875,7 +2875,7 @@ main {
 .news-archive__year h4 {
     margin: 0 0 0.75rem;
     color: #087f82;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
 }
 
@@ -3593,7 +3593,7 @@ main {
 .health-archive__copy h2 {
     margin: 0;
     color: var(--color-navy);
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(3.2rem, 7vw, 5.8rem);
     font-weight: 600;
     letter-spacing: -0.045em;
@@ -3779,7 +3779,7 @@ main {
 .health-archive__intro h3 {
     margin: 0;
     color: var(--color-navy);
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(2.2rem, 4.5vw, 3.5rem);
     font-weight: 600;
     letter-spacing: -0.025em;
@@ -4006,7 +4006,7 @@ main {
 .contributions-callout h3 {
     margin: 0;
     color: #fff;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(1.8rem, 4vw, 2.7rem);
     line-height: 1.05;
 }
@@ -4079,7 +4079,7 @@ main {
 
 .health-archive__stats strong {
     color: #087f82;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: 2rem;
     line-height: 1;
 }
@@ -4168,7 +4168,7 @@ main {
     border-radius: 50%;
     background: #087f82;
     color: #fff;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     box-shadow: 0 5px 16px rgb(8 127 130 / 20%);
@@ -4185,7 +4185,7 @@ main {
 .health-year__content h4 {
     margin: 0 0 0.9rem;
     color: var(--color-navy);
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
     line-height: 1;
 }
@@ -4384,7 +4384,7 @@ main {
 .programme-hero__copy h2 {
     margin: 0;
     color: #fff;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(2.8rem, 8vw, 6.5rem);
     font-weight: 600;
     letter-spacing: -0.045em;
@@ -4484,7 +4484,7 @@ main {
 .programme-activities__heading h3 {
     margin: 0;
     color: var(--color-navy);
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 600;
     letter-spacing: -0.03em;
@@ -4616,4 +4616,534 @@ main {
     img:hover {
         transform: scale(1.02);
     }
+}
+
+/* Unified blue-lavender palette based on #a6b0cd. */
+:root {
+    --color-ink: #273047;
+    --color-muted: #59637a;
+    --color-navy: #303d5c;
+    --color-violet: #596b99;
+    --color-lavender: #dfe4f1;
+    --color-paper: #f0f2f8;
+    --color-section: #e8ebf4;
+    --color-card: #dfe4f1;
+    --color-card-hover: #e9edf6;
+    --color-accent: #596b99;
+    --color-accent-soft: #e9ecf5;
+    --color-border: #d8ddeb;
+    --shadow-card: 0 18px 48px rgb(42 52 79 / 10%);
+}
+
+body {
+    background: #a6b0cd;
+    color: var(--color-ink);
+}
+
+body::before {
+    background:
+        radial-gradient(ellipse at 10% 12%, rgb(238 240 248 / 55%), transparent 36%),
+        radial-gradient(ellipse at 92% 38%, rgb(111 127 167 / 25%), transparent 40%),
+        radial-gradient(ellipse at 48% 96%, rgb(218 223 239 / 55%), transparent 42%);
+}
+
+.navbar,
+.js .navbar__links {
+    border-color: rgb(236 239 248 / 22%);
+    background: #3d4968;
+}
+
+.navbar__links a:hover,
+.js .navbar__links a:hover {
+    background: rgb(223 228 241 / 16%);
+    color: #fff;
+}
+
+.navbar__links a[aria-current="page"],
+.js .navbar__links a[aria-current="page"],
+.js .navbar__links a[aria-current="page"]:hover {
+    background: #e5e9f3;
+    color: #303d5c;
+}
+
+.navbar__toggle {
+    border-color: #cbd2e4;
+    background: #eef0f7;
+}
+
+.navbar__toggle span {
+    background: #303d5c;
+}
+
+.site-footer {
+    border-top-color: rgb(223 228 241 / 22%);
+    background: #303d5c;
+    color: #e5e9f3;
+}
+
+.personal-hero,
+.objectives-hero,
+.contributions-hero,
+.programme-hero {
+    border-color: rgb(223 228 241 / 24%);
+    background:
+        radial-gradient(ellipse at 88% 12%, rgb(166 176 205 / 24%), transparent 38%),
+        linear-gradient(128deg, #303d5c 0%, #465575 62%, #596b91 100%);
+    box-shadow: 0 28px 70px rgb(40 50 76 / 20%);
+}
+
+.personal-hero::before,
+.personal-hero::after {
+    border-color: rgb(223 228 241 / 22%);
+}
+
+.personal-hero__content .eyebrow,
+.personal-hero__content .eyebrow::before,
+.objectives-hero__copy .eyebrow,
+.contributions-hero__copy .eyebrow,
+.programme-hero__copy .eyebrow,
+.programme-hero__copy h2 span,
+.objectives-hero__copy h2 span,
+.contributions-hero__copy h2 span {
+    color: #dfe4f1;
+}
+
+.personal-hero__content .eyebrow::before {
+    background: #dfe4f1;
+}
+
+.personal-hero__credentials li {
+    border-color: rgb(223 228 241 / 30%);
+    color: #eef0f7;
+}
+
+.personal-hero__credentials li:hover {
+    border-color: rgb(223 228 241 / 66%);
+}
+
+.personal-hero__portrait {
+    outline-color: rgb(223 228 241 / 55%);
+    background: #dfe4f1;
+}
+
+.personal-hero__portrait figcaption {
+    background: rgb(48 61 92 / 88%);
+}
+
+.home-overview .home-intro,
+.home-explore {
+    border-color: var(--color-border);
+    border-top-color: #7482a6;
+}
+
+.home-overview .home-intro {
+    border-left-color: #7482a6;
+    background: linear-gradient(130deg, #fff 0%, #f6f7fb 100%);
+}
+
+.home-overview .home-intro .eyebrow {
+    border-color: #d8ddeb;
+    background: #eef0f7;
+    color: #465575;
+}
+
+.home-overview .home-intro .eyebrow::before,
+.program-card::before,
+.programme-activity::before,
+.objective-card::before,
+.contribution-card::before {
+    background: #7482a6;
+}
+
+.home-overview .home-intro::before {
+    border-color: rgb(89 107 153 / 14%);
+    background: radial-gradient(circle, rgb(166 176 205 / 24%), transparent 68%);
+}
+
+.home-profile > div:hover {
+    background: rgb(238 240 247 / 78%);
+}
+
+.home-explore {
+    background:
+        radial-gradient(ellipse at 100% 0%, rgb(223 228 241 / 72%), transparent 48%),
+        #fff;
+}
+
+.about-page,
+.page-section,
+.program-page__heading,
+.dental-info-page__heading,
+.contact-page,
+.home-intro,
+.home-explore,
+.program-card,
+.dental-info-card,
+.team-card,
+.news-feature__body,
+.news-card,
+.objectives-goal,
+.objective-card,
+.contribution-card,
+.programme-activity,
+.health-year__content,
+.health-timeline__photo {
+    border-color: var(--color-border);
+}
+
+.program-page__heading,
+.dental-info-page__heading,
+.health-archive__hero {
+    background:
+        radial-gradient(ellipse at 96% 0%, rgb(223 228 241 / 70%), transparent 40%),
+        #fff;
+}
+
+.program-card,
+.team-card,
+.news-feature__body,
+.news-card,
+.objective-card,
+.contribution-card,
+.programme-activity,
+.health-year__content,
+.health-timeline__photo {
+    background: linear-gradient(145deg, #fff, #f7f8fc);
+}
+
+.objectives-goals {
+    border-color: var(--color-border);
+    background:
+        radial-gradient(ellipse at 100% 0%, rgb(223 228 241 / 72%), transparent 44%),
+        #eef0f7;
+}
+
+.objectives-vision,
+.contributions-callout {
+    border-color: rgb(223 228 241 / 22%);
+    background:
+        radial-gradient(ellipse at 95% 0%, rgb(166 176 205 / 24%), transparent 48%),
+        #3d4968;
+}
+
+.contributions-callout a {
+    color: #303d5c;
+}
+
+.contributions-callout a:hover {
+    background: #e5e9f3;
+}
+
+.home-overview .home-intro .eyebrow,
+.home-intro .eyebrow,
+.home-explore .eyebrow,
+.home-explore.personal-note .eyebrow,
+.program-page__heading .eyebrow,
+.program-page__section-heading .eyebrow,
+.dental-info-page__heading .eyebrow,
+.dental-info-page__extra-heading .eyebrow,
+.contact-page__heading .eyebrow,
+.contact-card__label,
+.news-heading .eyebrow,
+.team-page .eyebrow,
+.about-page__heading .eyebrow,
+.objectives-section__heading .eyebrow,
+.contributions-section-heading .eyebrow,
+.health-archive__copy .eyebrow,
+.health-archive__intro .eyebrow,
+.programme-activities__heading .eyebrow {
+    color: #000;
+}
+
+.personal-hero__content .eyebrow,
+.programme-activities__heading h3 span,
+.objectives-section__heading h3 span,
+.contributions-section-heading h3 span,
+.health-archive__copy h2 span,
+.program-card__arrow,
+.program-card:hover .program-card__arrow {
+    color: #596b99;
+}
+
+.personal-hero__content .eyebrow {
+    color: #dfe4f1;
+}
+
+.personal-hero__content .eyebrow::before {
+    background: #dfe4f1;
+}
+
+.contributions-section-heading > span {
+    border-color: #d8ddeb;
+    background: #e9ecf5;
+    color: #465575;
+}
+
+.program-page__aside-number,
+.health-archive__stats strong {
+    color: #596b99;
+}
+
+.program-page__aside-rule {
+    background: #9aa5c2;
+}
+
+.health-year__content li::before {
+    background: #7482a6;
+}
+
+.program-card__number,
+.objective-card__number,
+.contribution-card__number,
+.programme-activity__number,
+.objectives-goal__number {
+    border-color: #d8ddeb;
+    background: #e9ecf5;
+    color: #465575;
+}
+
+.program-card:hover,
+.dental-info-card:hover,
+.objective-card:hover,
+.contribution-card:hover,
+.programme-activity:hover {
+    border-color: #9aa5c2;
+}
+
+.health-timeline::before {
+    background: linear-gradient(#7482a6, #d8ddeb);
+}
+
+.health-year__marker span {
+    border-color: #f0f2f8;
+    background: #596b99;
+    box-shadow: 0 5px 16px rgb(89 107 153 / 24%);
+}
+
+.home-carousel {
+    border-color: rgb(223 228 241 / 36%);
+}
+
+.home-carousel__arrow:hover {
+    background: #a6b0cd;
+    color: #273047;
+}
+
+.home-carousel__pagination button[aria-current="true"] {
+    background: #a6b0cd;
+}
+
+.dental-info-card__number,
+.news-category {
+    color: #596b99;
+}
+
+.health-archive__stats,
+.team-page .page-section__heading,
+.program-page__section-heading {
+    border-color: var(--color-border);
+}
+
+.home-explore__links a:hover,
+.news-disclaimer {
+    border-color: #cbd2e4;
+    background: #eef0f7;
+}
+
+.personal-hero__link:focus-visible,
+.objectives-hero__link:focus-visible,
+.contributions-hero__link:focus-visible,
+.programme-hero__link:focus-visible,
+.navbar__links a:focus-visible,
+.navbar__toggle:focus-visible {
+    outline-color: #a6b0cd;
+}
+
+.page-section,
+.about-page,
+.contact-page,
+.home-overview .home-intro,
+.home-explore,
+.program-page__heading,
+.dental-info-page__heading,
+.health-archive__hero,
+.objectives-goals {
+    background: var(--color-section);
+}
+
+.contact-card,
+.program-card,
+.dental-info-card,
+.team-card,
+.news-feature,
+.news-feature__body,
+.news-card,
+.objective-card,
+.contribution-card,
+.objectives-goal,
+.programme-activity,
+.health-year__content,
+.health-timeline__photo,
+.news-archive__year {
+    background: var(--color-card);
+}
+
+.contact-card:hover,
+.program-card:hover,
+.dental-info-card:hover,
+.team-card:hover,
+.news-card:hover,
+.objective-card:hover,
+.contribution-card:hover,
+.programme-activity:hover {
+    background: var(--color-card-hover);
+}
+
+.home-overview .home-intro::before {
+    background: radial-gradient(circle, rgb(166 176 205 / 32%), transparent 68%);
+}
+
+.personal-hero,
+.objectives-hero,
+.contributions-hero,
+.programme-hero,
+.objectives-vision,
+.contributions-callout {
+    border-color: rgb(223 228 241 / 24%);
+    background:
+        radial-gradient(ellipse at 88% 12%, rgb(166 176 205 / 24%), transparent 40%),
+        linear-gradient(128deg, #303d5c 0%, #465575 62%, #596b91 100%);
+}
+
+.home-overview .home-intro,
+.home-explore.personal-note {
+    border-color: var(--color-border);
+    border-top-color: var(--color-accent);
+    background: var(--color-section);
+}
+
+.home-overview .home-intro {
+    border-left-color: var(--color-accent);
+}
+
+.home-explore.personal-note::after,
+.home-overview .home-intro::before {
+    border-color: rgb(89 107 153 / 18%);
+    background: radial-gradient(circle, rgb(166 176 205 / 30%), transparent 68%);
+}
+
+.personal-hero__credentials li {
+    border-color: rgb(223 228 241 / 30%);
+    background: rgb(255 255 255 / 7%);
+    color: #eef0f7;
+}
+
+.personal-hero__credentials li:hover {
+    border-color: rgb(223 228 241 / 66%);
+}
+
+.personal-hero__portrait,
+.dental-info-page__image,
+.objectives-hero__image,
+.contributions-hero__image,
+.health-archive__image,
+.programme-hero__image {
+    background-color: var(--color-card);
+}
+
+.personal-hero__portrait {
+    outline-color: rgb(223 228 241 / 55%);
+}
+
+.home-profile dt,
+.dental-info-page__extra-heading .eyebrow,
+.news-archive__year h4,
+.program-page__aside-number,
+.health-archive__stats strong,
+.dental-info-card__number,
+.news-category {
+    color: var(--color-accent);
+}
+
+.home-profile > div {
+    border-top-color: var(--color-border);
+}
+
+.home-profile > div:hover {
+    background: rgb(233 236 245 / 78%);
+}
+
+.home-intro__link {
+    border-color: rgb(223 228 241 / 30%);
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.home-explore__links a:hover,
+.contributions-callout a:hover {
+    border-color: var(--color-accent);
+    background: var(--color-accent-soft);
+}
+
+.program-card__number,
+.objective-card__number,
+.contribution-card__number,
+.programme-activity__number,
+.objectives-goal__number {
+    border-color: var(--color-border);
+    background: var(--color-accent-soft);
+    color: var(--color-navy);
+}
+
+.program-card::before,
+.objective-card::before,
+.contribution-card::before,
+.programme-activity::before,
+.health-year__content li::before {
+    background: var(--color-accent);
+}
+
+.program-card:hover,
+.dental-info-card:hover,
+.team-card:hover,
+.news-card:hover,
+.objective-card:hover,
+.contribution-card:hover,
+.programme-activity:hover {
+    border-color: #9aa5c2;
+    background: var(--color-card-hover);
+}
+
+.health-timeline::before {
+    background: linear-gradient(var(--color-accent), var(--color-border));
+}
+
+.health-year__marker span {
+    border-color: var(--color-paper);
+    background: var(--color-accent);
+}
+
+.dental-info-page__vision {
+    border-left-color: var(--color-accent);
+    background: var(--color-accent-soft);
+}
+
+.program-page__aside-rule {
+    background: #9aa5c2;
+}
+
+.contributions-callout a {
+    background: var(--color-card);
+    color: var(--color-navy);
+}
+
+.contributions-callout a:focus-visible,
+.objectives-hero__link:focus-visible,
+.contributions-hero__link:focus-visible,
+.programme-hero__link:focus-visible {
+    outline-color: #cbd2e4;
+}
+
+.personal-hero__portrait:hover {
+    outline-color: rgb(223 228 241 / 82%);
 }
