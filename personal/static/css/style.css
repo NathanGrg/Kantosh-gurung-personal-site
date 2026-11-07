@@ -3989,6 +3989,30 @@ main {
     content: "";
 }
 
+.health-timeline__photo {
+    width: min(100% - 8.5rem, 680px);
+    margin-left: 8.5rem;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(22 53 66 / 4%);
+}
+
+.health-timeline__photo img {
+    display: block;
+    width: 100%;
+    height: clamp(180px, 30vw, 320px);
+    object-fit: cover;
+}
+
+.health-timeline__photo figcaption {
+    padding: 0.85rem 1rem;
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
 .health-year {
     position: relative;
     display: grid;
@@ -4135,6 +4159,11 @@ main {
         left: 1.7rem;
     }
 
+    .health-timeline__photo {
+        margin-left: 4.15rem;
+        width: calc(100% - 4.15rem);
+    }
+
     .health-year__marker {
         justify-content: flex-start;
     }
@@ -4174,6 +4203,11 @@ main {
 
     .health-timeline::before {
         left: 1.35rem;
+    }
+
+    .health-timeline__photo {
+        margin-left: 3.25rem;
+        width: calc(100% - 3.25rem);
     }
 
     .health-year__marker span {

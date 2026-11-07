@@ -39,6 +39,12 @@
                         </ul>
                     </div>
                 </article>
+                {% if forloop.counter|divisibleby:2 %}
+                    {% cycle 'images/wa21.jpeg' 'images/wa23.jpeg' 'images/wa24.jpeg' 'images/wa25.jpeg' 'images/wa26.jpeg' as news_photo silent %}
+                    <figure class="health-timeline__photo">
+                        <img src="{% static news_photo %}" alt="Children and community members taking part in school and outreach activities">
+                    </figure>
+                {% endif %}
             {% endfor %}
         </div>
     </section>
