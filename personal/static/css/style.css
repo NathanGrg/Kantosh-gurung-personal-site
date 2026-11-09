@@ -4720,7 +4720,7 @@ body::before {
 
 .personal-hero__portrait {
     width: min(100%, 340px);
-    aspect-ratio: 0.8;
+    aspect-ratio: 1;
     border-radius: 50%;
 }
 
