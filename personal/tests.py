@@ -68,9 +68,18 @@ class SectionPageTitleTests(TestCase):
         self.assertContains(response, 'data-carousel-track')
         self.assertContains(response, 'data-carousel-next')
         self.assertNotContains(response, 'src="/static/images/wa.jpeg"')
-        for image in [f'images/wa{number}.jpeg' for number in range(2, 29)]:
+        selected_images = (
+            2, 3, 4, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 20, 22, 23,
+            24, 25, 26, 27, 28,
+        )
+        for number in selected_images:
+            image = f'images/wa{number}.jpeg'
             with self.subTest(image=image):
                 self.assertContains(response, f'/static/{image}')
+        for number in (5, 6, 11, 12, 19, 21):
+            image = f'/static/images/wa{number}.jpeg'
+            with self.subTest(excluded_image=image):
+                self.assertNotContains(response, image)
 
     def test_about_page_is_removed(self):
         response = self.client.get('/about/')

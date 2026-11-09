@@ -419,7 +419,11 @@ def section(request, page):
         context = {
             **context,
             'carousel_images': [
-                f'images/wa{number}.jpeg' for number in range(2, 29)
+                f'images/wa{number}.jpeg'
+                for number in (
+                    2, 3, 4, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 20, 22,
+                    23, 24, 25, 26, 27, 28,
+                )
             ],
         }
     return render(request, f'personal/{page}.html', context)
