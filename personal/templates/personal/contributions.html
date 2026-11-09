@@ -15,10 +15,32 @@
                 {% endfor %}
                 <a class="contributions-hero__link" href="#contributions-options">Find your way to help <span aria-hidden="true">↓</span></a>
             </div>
-            <figure class="contributions-hero__image">
-                <img src="{% static image %}" alt="{{ image_alt }}">
-                <figcaption>Every contribution helps strengthen community care.</figcaption>
-            </figure>
+            <section class="home-carousel home-carousel--contributions" aria-label="Community work photo gallery">
+                <div class="home-carousel__track" data-carousel-track>
+                    {% for photo in carousel_images %}
+                        <article
+                            class="home-carousel__slide"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="{{ forloop.counter }} of {{ carousel_images|length }}"
+                        >
+                            <img
+                                src="{% static photo %}"
+                                alt="Community health and school outreach activity {{ forloop.counter }}"
+                                {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}
+                            >
+                        </article>
+                    {% endfor %}
+                </div>
+                <div class="home-carousel__controls" aria-label="Photo gallery controls">
+                    <button class="home-carousel__arrow" type="button" data-carousel-previous aria-label="Previous photo">
+                        <span aria-hidden="true">&larr;</span>
+                    </button>
+                    <button class="home-carousel__arrow" type="button" data-carousel-next aria-label="Next photo">
+                        <span aria-hidden="true">&rarr;</span>
+                    </button>
+                </div>
+            </section>
         </header>
 
         <div class="contributions-section-heading" id="contributions-options">

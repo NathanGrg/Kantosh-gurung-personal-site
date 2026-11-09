@@ -178,6 +178,51 @@ SECTION_CONTENT = {
         'image_alt': 'Community health outreach activity',
         'activities_by_year': [
             {
+                'year': 2026,
+                'activities': [
+                    'Lekhnath Basic School, Arupata, Lekhnath',
+                ],
+            },
+            {
+                'year': 2025,
+                'activities': [
+                    'Buddha Dahal School for the Deaf, Damauli, Tanahun',
+                ],
+            },
+            {
+                'year': 2024,
+                'activities': [
+                    'Swamisadananda Gurukulam, Danda Nak, Lekhnath',
+                ],
+            },
+            {
+                'year': 2021,
+                'activities': [
+                    'Child Welfare and Education, Lakeside, Pokhara',
+                    'Namaste Foundation, Lakeside, Pokhara',
+                ],
+            },
+            {
+                'year': 2020,
+                'activities': [
+                    'Chhunhup Primary School, Mustang',
+                ],
+            },
+            {
+                'year': 2019,
+                'activities': [
+                    'Child Welfare and Education, Lakeside, Pokhara',
+                    'Shrijana School for the Deaf, Lekhnath, Kaski',
+                    'Buddha Dahal School for the Deaf, Damauli, Tanahun',
+                    'Laxmi Primary School, Laxmi Bazaar, Lamjung',
+                    'Chhunhup Primary School, Mustang',
+                    'Namaste Foundation, Lakeside, Pokhara',
+                    'Rainbow Children Home, Lakeside, Pokhara',
+                    'Saileswari Primary School, Laxmi Bazaar, Lamjung',
+                    'Bindeswori Primary School, Shyaulibazaar, Lamjung',
+                ],
+            },
+            {
                 'year': 2018,
                 'activities': [
                     'Child Welfare & Education (CWE), Lakeside, Pokhara',
@@ -369,4 +414,12 @@ def base(request):
 
 
 def section(request, page):
-    return render(request, f'personal/{page}.html', SECTION_CONTENT[page])
+    context = SECTION_CONTENT[page]
+    if page == 'contributions':
+        context = {
+            **context,
+            'carousel_images': [
+                f'images/wa{number}.jpeg' for number in range(2, 29)
+            ],
+        }
+    return render(request, f'personal/{page}.html', context)

@@ -903,14 +903,9 @@ main {
 
 .home-carousel__track {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    overscroll-behavior-x: contain;
-}
-
-.home-carousel__track::-webkit-scrollbar {
-    display: none;
+    width: 100%;
+    transition: transform 320ms cubic-bezier(0.2, 0.75, 0.25, 1);
+    will-change: transform;
 }
 
 .home-carousel__slide {
@@ -918,17 +913,13 @@ main {
     flex: 0 0 100%;
     min-height: clamp(390px, 52vw, 620px);
     overflow: hidden;
-    scroll-snap-align: start;
     isolation: isolate;
 }
 
-.home-carousel__slide::after {
-    position: absolute;
-    z-index: 0;
-    background: linear-gradient(90deg, rgb(9 17 38 / 88%), rgb(9 17 38 / 48%) 54%, rgb(9 17 38 / 5%)),
-        linear-gradient(0deg, rgb(9 17 38 / 35%), transparent 50%);
-    content: "";
-    inset: 0;
+@media (prefers-reduced-motion: reduce) {
+    .home-carousel__track {
+        transition: none;
+    }
 }
 
 .home-carousel__slide img {
@@ -1028,6 +1019,16 @@ main {
 .home-carousel__pagination button[aria-current="true"] {
     width: 1.5rem;
     background: #8a88e6;
+}
+
+.home-carousel__status {
+    min-width: 4.5rem;
+    color: #fff;
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
 }
 
 .home-carousel__arrow:focus-visible,
@@ -1596,10 +1597,6 @@ main {
 
     .home-carousel__slide {
         min-height: 480px;
-    }
-
-    .home-carousel__slide::after {
-        background: linear-gradient(0deg, rgb(9 17 38 / 88%), rgb(9 17 38 / 34%) 72%, rgb(9 17 38 / 8%));
     }
 
     .home-carousel__caption {
@@ -4722,6 +4719,49 @@ body::before {
 }
 
 .personal-hero__portrait {
+    width: min(100%, 340px);
+    aspect-ratio: 0.8;
+    border-radius: 50%;
+}
+
+.personal-hero__portrait img {
+    border-radius: 50%;
+    object-position: center 32%;
+}
+
+.contributions-hero > .home-carousel--contributions {
+    z-index: 1;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    border-color: rgb(255 255 255 / 28%);
+    border-radius: 1.35rem;
+    box-shadow: 0 24px 60px rgb(5 26 36 / 35%);
+}
+
+.home-carousel--contributions .home-carousel__slide {
+    min-height: clamp(340px, 36vw, 460px);
+}
+
+@media (max-width: 900px) {
+    .home-carousel--contributions .home-carousel__slide {
+        min-height: 390px;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-carousel--contributions .home-carousel__slide {
+        min-height: clamp(340px, 95vw, 440px);
+    }
+}
+
+@media (max-width: 420px) {
+    .home-carousel--contributions .home-carousel__slide {
+        min-height: 350px;
+    }
+}
+
+.personal-hero__portrait {
     outline-color: rgb(223 228 241 / 55%);
     background: #dfe4f1;
 }
@@ -5146,4 +5186,82 @@ body::before {
 
 .personal-hero__portrait:hover {
     outline-color: rgb(223 228 241 / 82%);
+}
+
+.about-page__intro,
+.about-page__content > p:not(.about-page__intro),
+.program-page__heading .page-section__intro,
+.program-page__note,
+.program-page__aside-label,
+.program-page__aside-caption,
+.dental-info-page__intro,
+.dental-info-page__note,
+.contact-page__heading > p:last-child,
+.home-intro .page-section__intro,
+.home-intro > p:not(.eyebrow, .page-section__intro),
+.home-explore > p:not(.eyebrow),
+.team-page .page-section__intro,
+.team-page p:not(.eyebrow, .page-section__intro),
+.news-heading > p:last-child,
+.news-feature__body > p:not(.news-category, .news-meta),
+.news-card > p:not(.news-category, .news-meta),
+.objectives-section__heading > p:last-child,
+.health-archive__copy > p:not(.eyebrow),
+.health-archive__intro > p:last-child,
+.programme-activities__heading > p {
+    color: var(--color-muted);
+}
+
+.personal-hero__intro,
+.objectives-hero__intro,
+.contributions-hero__intro,
+.objectives-hero__note,
+.contributions-hero__note,
+.programme-hero__intro,
+.programme-hero__note,
+.contributions-callout > div > p:last-child {
+    color: #e5e9f3;
+}
+
+.program-page__heading h2 span,
+.program-page__aside-number,
+.program-card__arrow,
+.program-card:hover .program-card__arrow,
+.programme-activities__heading h3 span,
+.objectives-section__heading h3 span,
+.contributions-section-heading h3 span,
+.health-archive__copy h2 span {
+    color: var(--color-accent);
+}
+
+.personal-hero__content .eyebrow,
+.personal-hero__content .eyebrow::before,
+.objectives-hero__copy .eyebrow,
+.contributions-hero__copy .eyebrow,
+.programme-hero__copy .eyebrow,
+.programme-hero__copy h2 span,
+.objectives-hero__copy h2 span,
+.contributions-hero__copy h2 span,
+.contributions-callout .eyebrow {
+    color: #dfe4f1;
+}
+
+.personal-hero__content .eyebrow::before {
+    background: #dfe4f1;
+}
+
+.objectives-hero__link:hover,
+.contributions-hero__link:hover,
+.programme-hero__link:hover {
+    border-color: #cbd2e4;
+    background: rgb(223 228 241 / 14%);
+}
+
+.personal-hero__credentials li {
+    border-color: rgb(223 228 241 / 30%);
+    color: #eef0f7;
+}
+
+.personal-hero__credentials li:hover {
+    border-color: rgb(223 228 241 / 66%);
 }

@@ -6,28 +6,41 @@ if (carouselTrack) {
     const dots = Array.from(document.querySelectorAll("[data-carousel-dot]"));
     const previousButton = document.querySelector("[data-carousel-previous]");
     const nextButton = document.querySelector("[data-carousel-next]");
+    const status = carousel.querySelector("[data-carousel-status]");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let activeIndex = 0;
     let rotationTimer;
 
-    const showSlide = (index) => {
-        activeIndex = (index + slides.length) % slides.length;
-        carouselTrack.scrollTo({
-                left: slides[activeIndex].offsetLeft,
-                behavior: reducedMotion.matches ? "auto" : "smooth",
+    const updateControls = () => {
+        slides.forEach((slide, slideIndex) => {
+            slide.setAttribute("aria-hidden", String(slideIndex !== activeIndex));
         });
         dots.forEach((dot, dotIndex) => {
-                if (dotIndex === activeIndex) {
+            if (dotIndex === activeIndex) {
                 dot.setAttribute("aria-current", "true");
             } else {
                 dot.removeAttribute("aria-current");
             }
         });
+        if (status) {
+            status.textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+        }
+    };
+
+    const showSlide = (index) => {
+        activeIndex = (index + slides.length) % slides.length;
+        carouselTrack.style.transform = `translateX(-${activeIndex * 100}%)`;
+        updateControls();
     };
 
     const updateRotation = () => {
         window.clearInterval(rotationTimer);
-        if (!reducedMotion.matches && !carousel.matches(":hover") && !carousel.contains(document.activeElement)) {
+        if (
+            slides.length > 1
+            && !document.hidden
+            && !reducedMotion.matches
+            && !carousel.contains(document.activeElement)
+        ) {
             rotationTimer = window.setInterval(() => showSlide(activeIndex + 1), 5000);
         }
     };
@@ -38,36 +51,11 @@ if (carouselTrack) {
         dot.addEventListener("click", () => showSlide(index));
     });
 
-    carousel.addEventListener("mouseenter", updateRotation);
-    carousel.addEventListener("mouseleave", updateRotation);
     carousel.addEventListener("focusin", updateRotation);
     carousel.addEventListener("focusout", () => window.setTimeout(updateRotation, 0));
-    reducedMotion.addEventListener("change", (event) => {
-        if (event.matches) {
-            isPaused = true;
-        }
-        updateRotation();
-    });
+    reducedMotion.addEventListener("change", updateRotation);
+    document.addEventListener("visibilitychange", updateRotation);
 
-    let scrollTimer;
-    carouselTrack.addEventListener("scroll", () => {
-        window.clearTimeout(scrollTimer);
-        scrollTimer = window.setTimeout(() => {
-            const nearestIndex = slides.reduce((nearest, slide, index) => {
-                const nearestDistance = Math.abs(slides[nearest].offsetLeft - carouselTrack.scrollLeft);
-                const slideDistance = Math.abs(slide.offsetLeft - carouselTrack.scrollLeft);
-                return slideDistance < nearestDistance ? index : nearest;
-            }, 0);
-            activeIndex = nearestIndex;
-            dots.forEach((dot, dotIndex) => {
-                if (dotIndex === activeIndex) {
-                    dot.setAttribute("aria-current", "true");
-                } else {
-                    dot.removeAttribute("aria-current");
-                }
-            });
-        }, 80);
-    });
-
+    updateControls();
     updateRotation();
 }
