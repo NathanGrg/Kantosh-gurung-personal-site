@@ -41,7 +41,7 @@ if (carouselTrack) {
             && !reducedMotion.matches
             && !carousel.contains(document.activeElement)
         ) {
-            rotationTimer = window.setInterval(() => showSlide(activeIndex + 1), 1000);
+            rotationTimer = window.setInterval(() => showSlide(activeIndex + 1), 5000);
         }
     };
 
