@@ -4,8 +4,6 @@ if (carouselTrack) {
     const carousel = carouselTrack.closest(".home-carousel");
     const slides = Array.from(carouselTrack.querySelectorAll(".home-carousel__slide"));
     const dots = Array.from(document.querySelectorAll("[data-carousel-dot]"));
-    const previousButton = document.querySelector("[data-carousel-previous]");
-    const nextButton = document.querySelector("[data-carousel-next]");
     const status = carousel.querySelector("[data-carousel-status]");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let activeIndex = 0;
@@ -45,8 +43,6 @@ if (carouselTrack) {
         }
     };
 
-    previousButton?.addEventListener("click", () => showSlide(activeIndex - 1));
-    nextButton?.addEventListener("click", () => showSlide(activeIndex + 1));
     dots.forEach((dot, index) => {
         dot.addEventListener("click", () => showSlide(index));
     });
