@@ -481,14 +481,26 @@ main {
 }
 
 .contact-card__label {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
     margin-bottom: 0.55rem;
     color: #c9b9ff;
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.1em;
+    text-align: center;
     text-transform: uppercase;
 }
+
+.contact-card__label img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
 
 .contact-card a,
 .contact-card p {
@@ -500,6 +512,7 @@ main {
     font-weight: 700;
     line-height: 1.6;
     text-decoration: none;
+    text-align: center;
 }
 
 .contact-card a:hover {

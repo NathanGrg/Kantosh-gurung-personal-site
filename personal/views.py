@@ -47,7 +47,7 @@ SECTION_CONTENT = {
         'intro': 'We work with communities to improve oral health, expand health awareness, and create opportunities for children and families.',
         'paragraphs': [
         ],
-        'image': 'images/wa11.jpeg',
+        'image': 'images/wa13.jpeg',
         'image_alt': 'Students gather for a community oral health event',
         'items': [
             {
@@ -378,24 +378,11 @@ SECTION_CONTENT = {
         'title': 'Our Team',
         'intro': 'A community-led effort benefits from many perspectives and skills.',
         'paragraphs': [
-            'This sample team page describes example roles, not real people or staff members. A real initiative might include community organizers, volunteers, partner organizations, and qualified health professionals.',
         ],
         'team_members': [
             {
-                'role': 'Community Coordinator',
-                'image': 'personal/team/coordinator.svg',
-            },
-            {
-                'role': 'Health Resource Editor',
-                'image': 'personal/team/editor.svg',
-            },
-            {
-                'role': 'Community Volunteer',
-                'image': 'personal/team/volunteer.svg',
-            },
-            {
-                'role': 'Health Advisor',
-                'image': 'personal/team/advisor.svg',
+                'role': 'Tom , Deniz & Ava',
+                'image': 'personal/team/team.jpeg',
             },
         ],
     },
