@@ -4816,15 +4816,12 @@ body::before {
 
 /* Keep every card on the same blue background with white text. */
 .program-card,
-.dental-info-card,
 .contact-card,
 .team-card,
 .news-feature,
 .news-feature__body,
 .news-card,
 .news-archive__year,
-.objective-card,
-.contribution-card,
 .objectives-goal,
 .home-explore,
 .health-year__content,
@@ -4838,14 +4835,11 @@ body::before {
 }
 
 .program-card *,
-.dental-info-card *,
 .contact-card *,
 .team-card *,
 .news-feature *,
 .news-card *,
 .news-archive__year *,
-.objective-card *,
-.contribution-card *,
 .objectives-goal *,
 .home-explore *,
 .health-year__content *,
@@ -4855,9 +4849,6 @@ body::before {
 }
 
 .program-card__number,
-.dental-info-card__number,
-.objective-card__number,
-.contribution-card__number,
 .objectives-goal__number,
 .programme-activity__number {
     border-color: rgb(255 255 255 / 30%) !important;
