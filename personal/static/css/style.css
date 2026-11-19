@@ -4831,7 +4831,9 @@ body::before {
 .health-timeline__photo,
 .programme-activity {
     border-color: rgb(255 255 255 / 20%) !important;
-    background: #416fab !important;
+    background:
+        radial-gradient(ellipse at 88% 12%, rgb(166 176 205 / 24%), transparent 40%),
+        linear-gradient(128deg, #303d5c 0%, #465575 62%, #596b91 100%) !important;
     color: #fff !important;
 }
 
@@ -4868,7 +4870,9 @@ body::before {
 .health-year__content,
 .health-timeline__photo {
     border-color: rgb(255 255 255 / 20%) !important;
-    background: #416fab !important;
+    background:
+        radial-gradient(ellipse at 88% 12%, rgb(166 176 205 / 24%), transparent 40%),
+        linear-gradient(128deg, #303d5c 0%, #465575 62%, #596b91 100%) !important;
     color: #fff !important;
 }
 
