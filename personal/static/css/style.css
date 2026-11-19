@@ -4862,6 +4862,26 @@ body::before {
     background: rgb(255 255 255 / 14%) !important;
 }
 
+/* News/health archive card */
+.health-archive__hero,
+.news-archive__year,
+.health-year__content,
+.health-timeline__photo {
+    border-color: rgb(255 255 255 / 20%) !important;
+    background: #416fab !important;
+    color: #fff !important;
+}
+
+.health-archive__copy,
+.health-archive__copy *,
+.health-archive__intro,
+.health-archive__intro *,
+.news-archive__year *,
+.health-year__content *,
+.health-timeline__photo * {
+    color: #fff !important;
+}
+
 .personal-hero__portrait {
     width: min(100%, 340px);
     aspect-ratio: 1;
