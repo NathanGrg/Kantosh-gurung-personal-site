@@ -96,13 +96,13 @@ main {
 
 .page-section h2 {
     margin: 0 0 0.75rem;
-    color: white;
+    color: var(--color-navy);
     font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.2;
 }
 
 .page-section__intro {
-    color: #ffffff;
+    color: var(--color-navy);
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -4814,6 +4814,21 @@ body::before {
     border-color: rgb(223 228 241 / 66%);
 }
 
+.home-overview .page-section.home-intro,
+.home-overview .page-section.home-intro .eyebrow,
+.home-overview .page-section.home-intro h2,
+.home-overview .page-section.home-intro .page-section__intro,
+.home-overview .page-section.home-intro > p:not(.eyebrow, .page-section__intro) {
+    color: var(--color-navy);
+}
+
+.objective-card,
+.objective-card h4,
+.objective-card p,
+.objective-card__number {
+    color: var(--color-navy);
+}
+
 /* Keep every card on the same blue background with white text. */
 .program-card,
 .contact-card,
@@ -5423,4 +5438,72 @@ body::before {
 
 .personal-hero__credentials li:hover {
     border-color: rgb(223 228 241 / 66%);
+}
+
+.objectives-goal {
+    border-color: var(--color-border) !important;
+    background: var(--color-card) !important;
+    color: var(--color-navy) !important;
+}
+
+.objectives-goal h4,
+.objectives-goal p,
+.objectives-goal__number {
+    color: var(--color-navy) !important;
+}
+
+.objectives-goal__number {
+    border-color: var(--color-border) !important;
+    background: var(--color-accent-soft) !important;
+}
+
+.objectives-goals {
+    border-color: rgb(223 228 241 / 24%) !important;
+    background:
+        radial-gradient(ellipse at 88% 12%, rgb(166 176 205 / 24%), transparent 40%),
+        linear-gradient(128deg, #303d5c 0%, #465575 62%, #596b91 100%) !important;
+    color: #fff;
+}
+
+.objectives-goals .objectives-section__heading .eyebrow,
+.objectives-goals .objectives-section__heading h3,
+.objectives-goals .objectives-section__heading > p:last-child {
+    color: #fff;
+}
+
+.contribution-card,
+.contribution-card h4,
+.contribution-card p,
+.contribution-card__number {
+    color: var(--color-navy);
+}
+
+.health-archive__intro p {
+    color: var(--color-navy) !important;
+}
+
+.home-profile > div:hover {
+    background: transparent;
+}
+
+.programme-activity {
+    border-color: var(--color-border) !important;
+    background: var(--color-card) !important;
+    color: var(--color-navy) !important;
+}
+
+.programme-activity h4,
+.programme-activity p,
+.programme-activity__number {
+    color: var(--color-navy) !important;
+}
+
+.programme-activity__number {
+    border-color: var(--color-border) !important;
+    background: var(--color-accent-soft) !important;
+}
+
+.programme-activity:hover {
+    border-color: #9aa5c2 !important;
+    background: var(--color-card-hover) !important;
 }
