@@ -4588,6 +4588,89 @@ main {
         width: calc(100% - 1.25rem);
         margin-top: 1.25rem;
     }
+}
+
+/* Shared card palette */
+:root {
+    --card-blue: #416fab;
+}
+
+.program-card,
+.dental-info-card,
+.contact-card,
+.team-card,
+.news-feature,
+.news-feature__body,
+.news-card,
+.objective-card,
+.contribution-card,
+.objectives-goals,
+.objectives-goal,
+.health-year__content,
+.health-timeline__photo,
+.programme-activity {
+    border-color: rgb(255 255 255 / 18%);
+    background: var(--card-blue);
+    color: #fff;
+}
+
+.program-card h3,
+.program-card p,
+.program-card__number,
+.program-card__arrow,
+.dental-info-card h3,
+.dental-info-card p,
+.dental-info-card__number,
+.contact-card__label,
+.contact-card a,
+.contact-card p,
+.team-card h4,
+.team-card p,
+.news-feature h3,
+.news-feature h4,
+.news-feature p,
+.news-card h4,
+.news-card p,
+.news-category,
+.news-meta,
+.objective-card h4,
+.objective-card p,
+.objective-card__number,
+.contribution-card h4,
+.contribution-card p,
+.contribution-card__number,
+.objectives-goal h4,
+.objectives-goal p,
+.objectives-goal__number,
+.health-year__content h4,
+.health-year__content li,
+.health-timeline__photo figcaption,
+.programme-activity h4,
+.programme-activity p,
+.programme-activity__number {
+    color: #fff;
+}
+
+.program-card__number,
+.dental-info-card__number,
+.objective-card__number,
+.contribution-card__number,
+.objectives-goal__number,
+.programme-activity__number {
+    border-color: rgb(255 255 255 / 24%);
+    background: rgb(255 255 255 / 14%);
+}
+
+.program-card:hover,
+.dental-info-card:hover,
+.contact-card:hover,
+.team-card:hover,
+.news-card:hover,
+.objective-card:hover,
+.contribution-card:hover,
+.programme-activity:hover {
+    border-color: rgb(255 255 255 / 38%);
+    background: var(--card-blue);
 
     .programme-hero {
         grid-template-columns: 1fr;
@@ -4729,6 +4812,54 @@ body::before {
 
 .personal-hero__credentials li:hover {
     border-color: rgb(223 228 241 / 66%);
+}
+
+/* Keep every card on the same blue background with white text. */
+.program-card,
+.dental-info-card,
+.contact-card,
+.team-card,
+.news-feature,
+.news-feature__body,
+.news-card,
+.news-archive__year,
+.objective-card,
+.contribution-card,
+.objectives-goal,
+.home-explore,
+.health-year__content,
+.health-timeline__photo,
+.programme-activity {
+    border-color: rgb(255 255 255 / 20%) !important;
+    background: #416fab !important;
+    color: #fff !important;
+}
+
+.program-card *,
+.dental-info-card *,
+.contact-card *,
+.team-card *,
+.news-feature *,
+.news-card *,
+.news-archive__year *,
+.objective-card *,
+.contribution-card *,
+.objectives-goal *,
+.home-explore *,
+.health-year__content *,
+.health-timeline__photo *,
+.programme-activity * {
+    color: #fff !important;
+}
+
+.program-card__number,
+.dental-info-card__number,
+.objective-card__number,
+.contribution-card__number,
+.objectives-goal__number,
+.programme-activity__number {
+    border-color: rgb(255 255 255 / 30%) !important;
+    background: rgb(255 255 255 / 14%) !important;
 }
 
 .personal-hero__portrait {
